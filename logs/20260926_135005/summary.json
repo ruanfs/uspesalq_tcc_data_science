@@ -1,0 +1,58 @@
+[
+  {
+    "step": 7,
+    "name": "shap",
+    "cmd": "04_shap.py --res results --models lgbm --top-inter 40 --threads 8",
+    "returncode": 0,
+    "seconds": 2258.8,
+    "log": "logs\\20260926_135005\\07_shap.log"
+  },
+  {
+    "step": 8,
+    "name": "shap_lvl8",
+    "cmd": "04_shap.py --res results_lvl8 --models lgbm --top-inter 40 --threads 8",
+    "returncode": 0,
+    "seconds": 382.6,
+    "log": "logs\\20260926_135005\\08_shap_lvl8.log"
+  },
+  {
+    "step": 9,
+    "name": "shap_no_units",
+    "cmd": "04_shap.py --res results_no_units --models lgbm --top-inter 40 --threads 8",
+    "returncode": 0,
+    "seconds": 317.3,
+    "log": "logs\\20260926_135005\\09_shap_no_units.log"
+  },
+  {
+    "step": 10,
+    "name": "report",
+    "cmd": "05_report.py --res results --out report --model lgbm",
+    "returncode": 0,
+    "seconds": 5.9,
+    "log": "logs\\20260926_135005\\10_report.log"
+  },
+  {
+    "step": 11,
+    "name": "report_lvl8",
+    "cmd": "05_report.py --res results_lvl8 --out report_lvl8 --model lgbm",
+    "returncode": 0,
+    "seconds": 5.5,
+    "log": "logs\\20260926_135005\\11_report_lvl8.log"
+  },
+  {
+    "step": 12,
+    "name": "report_no_units",
+    "cmd": "05_report.py --res results_no_units --out report_no_units --model lgbm",
+    "returncode": 0,
+    "seconds": 5.7,
+    "log": "logs\\20260926_135005\\12_report_no_units.log"
+  },
+  {
+    "step": 13,
+    "name": "sensitivity",
+    "cmd": "06_sensitivity.py",
+    "returncode": 0,
+    "seconds": 0.6,
+    "log": "logs\\20260926_135005\\13_sensitivity.log"
+  }
+]

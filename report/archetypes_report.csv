@@ -1,0 +1,13 @@
+cluster_id,archetype_name,n_players,share,top4_rate,top4_lo,top4_hi,diff_vs_50
+0,archetype_Ionia_TheBoss_Wukong_0,184751,0.11175140573131902,0.5449,0.5428,0.5471,True
+3,archetype_Piltover_Freljord_Braum_3,107248,0.06487171794400302,0.5447,0.5421,0.5475,True
+10,archetype_Slayer_Vanquisher_BelVeth_10,93383,0.05648511521673909,0.5401,0.5368,0.5432,True
+4,archetype_Void_KaisaUnique_Kaisa_4,117204,0.07089386123665645,0.5369,0.534,0.5402,True
+11,archetype_Yordle_Targon_Ziggs_11,37011,0.022387057593852528,0.528,0.523,0.5327,True
+2,archetype_Demacia_Defender_Garen_2,171561,0.10377309415738384,0.5228,0.5206,0.5251,True
+9,archetype_Gunslinger_Brawler_MissFortune_9,120952,0.07316093567025075,0.5105,0.5078,0.5131,True
+5,archetype_Noxus_Juggernaut_Swain_5,163318,0.09878710308051139,0.5012,0.4991,0.5033,False
+7,archetype_Piltover_Warden_Loris_7,104977,0.06349804504147029,0.4973,0.4949,0.5005,False
+8,archetype_Yordle_Defender_Kennen_8,87368,0.05284678738374288,0.4821,0.4785,0.4852,True
+6,archetype_Brawler_Invoker_Kobuko_6,108089,0.0653804184772615,0.4518,0.449,0.4546,True
+1,archetype_Piltover_Defender_Vi_1,357370,0.21616445846680926,0.4426,0.4412,0.4439,True

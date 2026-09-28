@@ -1,0 +1,2 @@
+2026-09-25 23:11:18,277 | [lgbm_A] SHAP em 5000 linhas × 816 features
+2026-09-25 23:11:40,746 |   H1b SHAP médio por nº de traits ouro+: {0: 0.018, 1: -0.023, 2: 0.062, 3: 0.242}

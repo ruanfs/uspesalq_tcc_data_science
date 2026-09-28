@@ -1,0 +1,336 @@
+2026-09-26 10:34:32,945 | INFO | [main] args: {'inp': 'data/processed', 'out': 'results_no_units', 'models': 'logreg,rf,lgbm', 'trials': 20, 'outer': 3, 'inner': 3, 'tune_frac': 0.25, 'n_boot': 500, 'budget_min': 240, 'min_level': 0, 'drop_agg': '', 'drop_blocks': 'unit,unit_item', 'log_level': 'INFO'}
+2026-09-26 10:34:32,949 | INFO | [load] lendo data\processed\features.parquet
+2026-09-26 10:34:32,968 | INFO | [load] removidas 625 features (blocos=['unit', 'unit_item'], features=[])
+2026-09-26 10:34:32,970 | INFO | [load] 187 features | 186 no cenário A
+2026-09-26 10:34:33,573 | INFO | [load] meta: 1,653,232 linhas | 206,654 partidas | top4=0.500 | patches=['16.1', '16.2', '16.3', '16.4', '16.5']
+2026-09-26 10:34:35,845 | INFO | [load] bloco 1/2: nnz=50,805,792 | 413 MB | 2.3s
+2026-09-26 10:34:36,837 | INFO | [load] bloco 2/2: nnz=6,911,745 | 62 MB | 1.0s
+2026-09-26 10:34:37,696 | INFO | [load] XA: (1653232, 191), densidade=0.1880, 482 MB | XB: (1653232, 192) | tempo 4.7s
+2026-09-26 10:34:39,887 | INFO | [main] baseline AUC OOF=0.7408
+2026-09-26 10:34:39,887 | INFO | == logreg | A | 191 feats | tuning 4.3 min | decorrido 0 min
+2026-09-26 10:34:40,286 | INFO |   [fold 1/3] treino=1,102,152 teste=551,080 | trials=20
+2026-09-26 10:34:40,353 | INFO | [tune] logreg | n_trials=20 | timeout=1.7 min
+2026-09-26 10:34:40,392 | INFO | [group_sample] 34,442/137,769 partidas (25%) -> 275,536 linhas
+2026-09-26 10:34:59,047 | INFO | [obj] trial 0: loss=0.39124 | 18.6s
+2026-09-26 10:35:33,642 | INFO | [obj] trial 1: loss=0.38094 | 34.6s
+2026-09-26 10:36:14,559 | INFO | [obj] trial 2: loss=0.38097 | 40.9s
+2026-09-26 10:36:24,679 | INFO |     tuning logreg: 4 trials (1 podados), loss=0.38094 | 1.7 min | best={'C': 6.351221010640703}
+2026-09-26 10:36:42,400 | INFO | [fit] logreg: 191/191 coef. não nulos | n_iter=12
+2026-09-26 10:36:42,737 | INFO |   fold 1: AUC=0.9142 | 2.0 min | decorrido 2 min
+2026-09-26 10:36:42,770 | INFO |   [fold 2/3] treino=1,102,152 teste=551,080 | trials=6
+2026-09-26 10:36:42,835 | INFO | [tune] logreg | n_trials=6 | timeout=1.3 min
+2026-09-26 10:36:42,872 | INFO | [group_sample] 34,442/137,769 partidas (25%) -> 275,536 linhas
+2026-09-26 10:37:16,189 | INFO | [obj] trial 0: loss=0.37821 | 33.2s
+2026-09-26 10:37:44,791 | INFO | [obj] trial 1: loss=0.38913 | 28.6s
+2026-09-26 10:38:17,229 | INFO | [obj] trial 2: loss=0.37821 | 32.4s
+2026-09-26 10:38:17,255 | INFO |     tuning logreg: 3 trials (0 podados), loss=0.37821 | 1.6 min | best={'C': 6.351221010640703}
+2026-09-26 10:38:35,017 | INFO | [fit] logreg: 191/191 coef. não nulos | n_iter=12
+2026-09-26 10:38:35,352 | INFO |   fold 2: AUC=0.9142 | 1.9 min | decorrido 4 min
+2026-09-26 10:38:35,385 | INFO |   [fold 3/3] treino=1,102,160 teste=551,072 | trials=6
+2026-09-26 10:38:35,450 | INFO | [tune] logreg | n_trials=6 | timeout=1.3 min
+2026-09-26 10:38:35,499 | INFO | [group_sample] 34,442/137,770 partidas (25%) -> 275,536 linhas
+2026-09-26 10:39:08,889 | INFO | [obj] trial 0: loss=0.37914 | 33.3s
+2026-09-26 10:39:42,680 | INFO | [obj] trial 1: loss=0.38938 | 33.8s
+2026-09-26 10:40:15,998 | INFO | [obj] trial 2: loss=0.37914 | 33.3s
+2026-09-26 10:40:16,024 | INFO |     tuning logreg: 3 trials (0 podados), loss=0.37914 | 1.7 min | best={'C': 6.351221010640703}
+2026-09-26 10:40:32,350 | INFO | [fit] logreg: 191/191 coef. não nulos | n_iter=11
+2026-09-26 10:40:32,690 | INFO |   fold 3: AUC=0.9142 | 2.0 min | decorrido 6 min
+2026-09-26 10:40:33,044 | INFO | [run_nested] logreg: 5.9 min | AUC OOF=0.9142
+2026-09-26 10:40:53,585 | INFO | [fit] logreg: 191/191 coef. não nulos | n_iter=9
+2026-09-26 10:40:53,588 | INFO | [main] salvo results_no_units\models\final_logreg_A.joblib (0.0 MB)
+2026-09-26 10:40:53,620 | INFO | == rf | A | 191 feats | tuning 15.1 min | decorrido 6 min
+2026-09-26 10:40:54,003 | INFO |   [fold 1/3] treino=1,102,152 teste=551,080 | trials=20
+2026-09-26 10:40:54,069 | INFO | [tune] rf | n_trials=20 | timeout=6.0 min
+2026-09-26 10:40:54,107 | INFO | [group_sample] 34,442/137,769 partidas (25%) -> 275,536 linhas
+2026-09-26 10:40:54,135 | INFO | [dense] (275536, 191) -> denso float32 (0.2 GB)
+2026-09-26 10:41:01,564 | INFO | [obj] trial 0: loss=0.40244 | 7.3s
+2026-09-26 10:41:08,883 | INFO | [obj] trial 1: loss=0.40186 | 7.3s
+2026-09-26 10:41:15,824 | INFO | [obj] trial 2: loss=0.42514 | 6.9s
+2026-09-26 10:41:23,266 | INFO | [obj] trial 3: loss=0.39527 | 7.4s
+2026-09-26 10:41:53,981 | INFO | [obj] trial 4: loss=0.35521 | 30.7s
+2026-09-26 10:42:22,982 | INFO | [obj] trial 5: loss=0.35797 | 29.0s
+2026-09-26 10:42:42,877 | INFO | [obj] trial 6: loss=0.35596 | 19.9s
+2026-09-26 10:43:10,808 | INFO | [obj] trial 7: loss=0.36142 | 27.9s
+2026-09-26 10:43:41,474 | INFO | [obj] trial 8: loss=0.35521 | 30.6s
+2026-09-26 10:44:25,647 | INFO | [obj] trial 11: loss=0.35615 | 29.8s
+2026-09-26 10:44:58,922 | INFO | [obj] trial 13: loss=0.35491 | 30.5s
+2026-09-26 10:45:37,824 | INFO | [obj] trial 15: loss=0.35468 | 32.8s
+2026-09-26 10:46:10,159 | INFO | [obj] trial 16: loss=0.35473 | 32.3s
+2026-09-26 10:46:43,151 | INFO | [obj] trial 17: loss=0.35468 | 33.0s
+2026-09-26 10:46:56,356 | INFO |     tuning rf: 20 trials (6 podados), loss=0.35468 | 6.0 min | best={'max_depth': 24, 'min_samples_leaf': 2, 'max_features': 0.5}
+2026-09-26 10:46:56,464 | INFO | [dense] (1102152, 191) -> denso float32 (0.8 GB)
+[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 16 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  18 tasks      | elapsed:    2.4s
+[Parallel(n_jobs=-1)]: Done 168 tasks      | elapsed:   13.8s
+[Parallel(n_jobs=-1)]: Done 200 out of 200 | elapsed:   16.1s finished
+2026-09-26 10:47:15,514 | INFO |   fold 1: AUC=0.9238 | 6.4 min | decorrido 13 min
+2026-09-26 10:47:15,551 | INFO |   [fold 2/3] treino=1,102,152 teste=551,080 | trials=6
+2026-09-26 10:47:15,617 | INFO | [tune] rf | n_trials=6 | timeout=4.5 min
+2026-09-26 10:47:15,659 | INFO | [group_sample] 34,442/137,769 partidas (25%) -> 275,536 linhas
+2026-09-26 10:47:15,691 | INFO | [dense] (275536, 191) -> denso float32 (0.2 GB)
+2026-09-26 10:47:49,504 | INFO | [obj] trial 0: loss=0.35645 | 33.7s
+2026-09-26 10:47:57,648 | INFO | [obj] trial 1: loss=0.40376 | 8.1s
+2026-09-26 10:48:05,741 | INFO | [obj] trial 2: loss=0.40280 | 8.1s
+2026-09-26 10:48:16,290 | INFO | [obj] trial 4: loss=0.39609 | 8.1s
+2026-09-26 10:48:46,521 | INFO | [obj] trial 5: loss=0.35941 | 30.2s
+2026-09-26 10:48:46,548 | INFO |     tuning rf: 6 trials (1 podados), loss=0.35645 | 1.5 min | best={'max_depth': 24, 'min_samples_leaf': 2, 'max_features': 0.5}
+2026-09-26 10:48:46,647 | INFO | [dense] (1102152, 191) -> denso float32 (0.8 GB)
+[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 16 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  18 tasks      | elapsed:    2.4s
+[Parallel(n_jobs=-1)]: Done 168 tasks      | elapsed:   13.7s
+[Parallel(n_jobs=-1)]: Done 200 out of 200 | elapsed:   15.9s finished
+2026-09-26 10:49:05,456 | INFO |   fold 2: AUC=0.9236 | 1.8 min | decorrido 15 min
+2026-09-26 10:49:05,492 | INFO |   [fold 3/3] treino=1,102,160 teste=551,072 | trials=6
+2026-09-26 10:49:05,557 | INFO | [tune] rf | n_trials=6 | timeout=4.5 min
+2026-09-26 10:49:05,593 | INFO | [group_sample] 34,442/137,770 partidas (25%) -> 275,536 linhas
+2026-09-26 10:49:05,622 | INFO | [dense] (275536, 191) -> denso float32 (0.2 GB)
+2026-09-26 10:49:38,404 | INFO | [obj] trial 0: loss=0.35660 | 32.7s
+2026-09-26 10:49:45,997 | INFO | [obj] trial 1: loss=0.40380 | 7.6s
+2026-09-26 10:49:53,462 | INFO | [obj] trial 2: loss=0.40291 | 7.4s
+2026-09-26 10:50:03,454 | INFO | [obj] trial 4: loss=0.39647 | 7.6s
+2026-09-26 10:50:33,272 | INFO | [obj] trial 5: loss=0.35933 | 29.8s
+2026-09-26 10:50:33,299 | INFO |     tuning rf: 6 trials (1 podados), loss=0.35660 | 1.5 min | best={'max_depth': 24, 'min_samples_leaf': 2, 'max_features': 0.5}
+2026-09-26 10:50:33,398 | INFO | [dense] (1102160, 191) -> denso float32 (0.8 GB)
+[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 16 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  18 tasks      | elapsed:    2.4s
+[Parallel(n_jobs=-1)]: Done 168 tasks      | elapsed:   13.5s
+[Parallel(n_jobs=-1)]: Done 200 out of 200 | elapsed:   15.7s finished
+2026-09-26 10:50:51,983 | INFO |   fold 3: AUC=0.9232 | 1.8 min | decorrido 16 min
+2026-09-26 10:50:52,337 | INFO | [run_nested] rf: 10.0 min | AUC OOF=0.9235
+2026-09-26 10:50:52,337 | INFO | [dense] (1653232, 191) -> denso float32 (1.3 GB)
+[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 16 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  18 tasks      | elapsed:    2.7s
+[Parallel(n_jobs=-1)]: Done 168 tasks      | elapsed:   15.4s
+[Parallel(n_jobs=-1)]: Done 200 out of 200 | elapsed:   17.7s finished
+2026-09-26 10:51:11,235 | INFO | [main] salvo results_no_units\models\final_rf_A.joblib (20.9 MB)
+2026-09-26 10:51:11,263 | INFO | == lgbm | A | 191 feats | tuning 23.8 min | decorrido 17 min
+2026-09-26 10:51:11,643 | INFO |   [fold 1/3] treino=1,102,152 teste=551,080 | trials=20
+2026-09-26 10:51:11,708 | INFO | [tune] lgbm | n_trials=20 | timeout=9.5 min
+2026-09-26 10:51:11,744 | INFO | [group_sample] 34,442/137,769 partidas (25%) -> 275,536 linhas
+2026-09-26 10:51:23,018 | INFO | [obj] trial 0: loss=0.32737 | 11.2s | árvores=475
+2026-09-26 10:51:47,341 | INFO | [obj] trial 1: loss=0.32606 | 24.3s | árvores=1491
+2026-09-26 10:51:55,365 | INFO | [obj] trial 2: loss=0.32827 | 8.0s | árvores=447
+2026-09-26 10:52:11,871 | INFO | [obj] trial 3: loss=0.32621 | 16.5s | árvores=1113
+2026-09-26 10:52:38,125 | INFO | [obj] trial 5: loss=0.32630 | 20.2s | árvores=1009
+2026-09-26 10:53:30,829 | INFO | [obj] trial 9: loss=0.32537 | 30.4s | árvores=2606
+2026-09-26 10:54:19,155 | INFO | [obj] trial 10: loss=0.32529 | 48.3s | árvores=4539
+2026-09-26 10:54:43,824 | INFO | [obj] trial 11: loss=0.32583 | 24.6s | árvores=2185
+2026-09-26 10:55:24,764 | INFO | [obj] trial 12: loss=0.32566 | 40.9s | árvores=3711
+2026-09-26 10:55:54,107 | INFO | [obj] trial 13: loss=0.32574 | 29.3s | árvores=1959
+2026-09-26 10:56:22,390 | INFO | [obj] trial 14: loss=0.32550 | 28.3s | árvores=2116
+2026-09-26 10:57:08,376 | INFO | [obj] trial 15: loss=0.32561 | 46.0s | árvores=4499
+2026-09-26 10:57:55,924 | INFO | [obj] trial 16: loss=0.32512 | 47.5s | árvores=3884
+2026-09-26 10:58:42,227 | INFO | [obj] trial 18: loss=0.32553 | 27.9s | árvores=1981
+2026-09-26 10:59:26,677 | INFO | [obj] trial 19: loss=0.32523 | 44.4s | árvores=3875
+2026-09-26 10:59:26,707 | INFO |     tuning lgbm: 20 trials (5 podados), loss=0.32512 | 8.2 min | best={'learning_rate': 0.03140570343331407, 'num_leaves': 20, 'min_child_samples': 97, 'subsample': 0.7574820079030267, 'colsample_bytree': 0.3804392518553657, 'reg_lambda': 5.817101458598127, 'n_estimators': 10000}
+2026-09-26 11:07:08,836 | INFO | [fit] lgbm early stopping: 9991 árvores | ganho logloss últimas 1000: 0.00010
+2026-09-26 11:08:02,803 | INFO |   [fold 1] modelo salvo fold_lgbm_A_0.joblib (9.0 MB)
+2026-09-26 11:08:02,904 | INFO |   fold 1: AUC=0.9384 | 16.9 min | decorrido 33 min
+2026-09-26 11:08:02,942 | INFO |   [fold 2/3] treino=1,102,152 teste=551,080 | trials=6
+2026-09-26 11:08:03,007 | INFO | [tune] lgbm | n_trials=6 | timeout=7.1 min
+2026-09-26 11:08:03,045 | INFO | [group_sample] 34,442/137,769 partidas (25%) -> 275,536 linhas
+2026-09-26 11:08:44,580 | INFO | [obj] trial 0: loss=0.31986 | 41.5s | árvores=3489
+2026-09-26 11:08:55,720 | INFO | [obj] trial 1: loss=0.32216 | 11.1s | árvores=492
+2026-09-26 11:09:17,825 | INFO | [obj] trial 2: loss=0.32090 | 22.1s | árvores=1341
+2026-09-26 11:09:52,216 | INFO |     tuning lgbm: 6 trials (3 podados), loss=0.31986 | 1.8 min | best={'learning_rate': 0.03140570343331407, 'num_leaves': 20, 'min_child_samples': 97, 'subsample': 0.7574820079030267, 'colsample_bytree': 0.3804392518553657, 'reg_lambda': 5.817101458598127, 'n_estimators': 10000}
+2026-09-26 11:17:37,843 | INFO | [fit] lgbm early stopping: 9994 árvores | ganho logloss últimas 1000: 0.00012
+2026-09-26 11:18:37,894 | INFO |   [fold 2] modelo salvo fold_lgbm_A_1.joblib (9.0 MB)
+2026-09-26 11:18:38,001 | INFO |   fold 2: AUC=0.9387 | 10.6 min | decorrido 44 min
+2026-09-26 11:18:38,045 | INFO |   [fold 3/3] treino=1,102,160 teste=551,072 | trials=6
+2026-09-26 11:18:38,111 | INFO | [tune] lgbm | n_trials=6 | timeout=7.1 min
+2026-09-26 11:18:38,148 | INFO | [group_sample] 34,442/137,770 partidas (25%) -> 275,536 linhas
+2026-09-26 11:19:24,747 | INFO | [obj] trial 0: loss=0.32165 | 46.6s | árvores=3770
+2026-09-26 11:19:36,136 | INFO | [obj] trial 1: loss=0.32364 | 11.4s | árvores=484
+2026-09-26 11:20:00,494 | INFO | [obj] trial 2: loss=0.32265 | 24.3s | árvores=1484
+2026-09-26 11:20:37,005 | INFO |     tuning lgbm: 6 trials (3 podados), loss=0.32165 | 2.0 min | best={'learning_rate': 0.03140570343331407, 'num_leaves': 20, 'min_child_samples': 97, 'subsample': 0.7574820079030267, 'colsample_bytree': 0.3804392518553657, 'reg_lambda': 5.817101458598127, 'n_estimators': 10000}
+2026-09-26 11:28:19,870 | INFO | [fit] lgbm early stopping: 9993 árvores | ganho logloss últimas 1000: 0.00011
+2026-09-26 11:29:17,280 | INFO |   [fold 3] modelo salvo fold_lgbm_A_2.joblib (9.0 MB)
+2026-09-26 11:29:17,395 | INFO |   fold 3: AUC=0.9384 | 10.7 min | decorrido 55 min
+2026-09-26 11:29:17,782 | INFO | [run_nested] lgbm: 38.1 min | AUC OOF=0.9385
+2026-09-26 11:40:54,161 | INFO | [fit] lgbm early stopping: 9954 árvores | ganho logloss últimas 1000: 0.00019
+2026-09-26 11:40:54,810 | INFO | [main] salvo results_no_units\models\final_lgbm_A.joblib (9.0 MB)
+2026-09-26 11:40:54,842 | INFO | == logreg | B | 192 feats | tuning 2.9 min | decorrido 66 min
+2026-09-26 11:40:55,240 | INFO |   [fold 1/3] treino=1,102,152 teste=551,080 | trials=6
+2026-09-26 11:40:55,307 | INFO | [tune] logreg | n_trials=6 | timeout=1.2 min
+2026-09-26 11:40:55,343 | INFO | [group_sample] 34,442/137,769 partidas (25%) -> 275,536 linhas
+2026-09-26 11:41:15,830 | INFO | [obj] trial 0: loss=0.35011 | 20.4s
+2026-09-26 11:41:38,527 | INFO | [obj] trial 1: loss=0.35612 | 22.7s
+2026-09-26 11:41:58,984 | INFO | [obj] trial 2: loss=0.35011 | 20.4s
+2026-09-26 11:42:05,630 | INFO |     tuning logreg: 4 trials (1 podados), loss=0.35011 | 1.2 min | best={'C': 6.351221010640703}
+2026-09-26 11:42:19,425 | INFO | [fit] logreg: 192/192 coef. não nulos | n_iter=9
+2026-09-26 11:42:19,777 | INFO |   fold 1: AUC=0.9250 | 1.4 min | decorrido 68 min
+2026-09-26 11:42:19,810 | INFO |   [fold 2/3] treino=1,102,152 teste=551,080 | trials=6
+2026-09-26 11:42:19,880 | INFO | [tune] logreg | n_trials=6 | timeout=0.9 min
+2026-09-26 11:42:19,916 | INFO | [group_sample] 34,442/137,769 partidas (25%) -> 275,536 linhas
+2026-09-26 11:42:36,814 | INFO | [obj] trial 0: loss=0.34814 | 16.8s
+2026-09-26 11:43:12,048 | INFO | [obj] trial 1: loss=0.35422 | 35.2s
+2026-09-26 11:43:12,075 | INFO |     tuning logreg: 2 trials (0 podados), loss=0.34814 | 0.9 min | best={'C': 6.351221010640703}
+2026-09-26 11:43:25,900 | INFO | [fit] logreg: 192/192 coef. não nulos | n_iter=9
+2026-09-26 11:43:26,253 | INFO |   fold 2: AUC=0.9249 | 1.1 min | decorrido 69 min
+2026-09-26 11:43:26,287 | INFO |   [fold 3/3] treino=1,102,160 teste=551,072 | trials=6
+2026-09-26 11:43:26,353 | INFO | [tune] logreg | n_trials=6 | timeout=0.9 min
+2026-09-26 11:43:26,389 | INFO | [group_sample] 34,442/137,770 partidas (25%) -> 275,536 linhas
+2026-09-26 11:43:46,070 | INFO | [obj] trial 0: loss=0.34761 | 19.6s
+2026-09-26 11:44:10,305 | INFO | [obj] trial 1: loss=0.35414 | 24.2s
+2026-09-26 11:44:29,833 | INFO | [obj] trial 2: loss=0.34761 | 19.5s
+2026-09-26 11:44:29,860 | INFO |     tuning logreg: 3 trials (0 podados), loss=0.34761 | 1.1 min | best={'C': 6.351221010640703}
+2026-09-26 11:44:43,554 | INFO | [fit] logreg: 192/192 coef. não nulos | n_iter=9
+2026-09-26 11:44:43,894 | INFO |   fold 3: AUC=0.9251 | 1.3 min | decorrido 70 min
+2026-09-26 11:44:44,251 | INFO | [run_nested] logreg: 3.8 min | AUC OOF=0.9250
+2026-09-26 11:45:05,048 | INFO | [fit] logreg: 192/192 coef. não nulos | n_iter=9
+2026-09-26 11:45:05,058 | INFO | [main] salvo results_no_units\models\final_logreg_B.joblib (0.0 MB)
+2026-09-26 11:45:05,084 | INFO | == rf | B | 192 feats | tuning 10.1 min | decorrido 71 min
+2026-09-26 11:45:05,463 | INFO |   [fold 1/3] treino=1,102,152 teste=551,080 | trials=6
+2026-09-26 11:45:05,530 | INFO | [tune] rf | n_trials=6 | timeout=4.0 min
+2026-09-26 11:45:05,565 | INFO | [group_sample] 34,442/137,769 partidas (25%) -> 275,536 linhas
+2026-09-26 11:45:05,603 | INFO | [dense] (275536, 192) -> denso float32 (0.2 GB)
+2026-09-26 11:45:37,476 | INFO | [obj] trial 0: loss=0.35146 | 31.8s
+2026-09-26 11:45:45,027 | INFO | [obj] trial 1: loss=0.39840 | 7.5s
+2026-09-26 11:45:52,499 | INFO | [obj] trial 2: loss=0.39780 | 7.4s
+2026-09-26 11:46:02,481 | INFO | [obj] trial 4: loss=0.39090 | 7.6s
+2026-09-26 11:46:31,648 | INFO | [obj] trial 5: loss=0.35362 | 29.1s
+2026-09-26 11:46:31,689 | INFO |     tuning rf: 6 trials (1 podados), loss=0.35146 | 1.4 min | best={'max_depth': 24, 'min_samples_leaf': 2, 'max_features': 0.5}
+2026-09-26 11:46:31,791 | INFO | [dense] (1102152, 192) -> denso float32 (0.8 GB)
+[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 16 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  18 tasks      | elapsed:    2.4s
+[Parallel(n_jobs=-1)]: Done 168 tasks      | elapsed:   13.3s
+[Parallel(n_jobs=-1)]: Done 200 out of 200 | elapsed:   15.3s finished
+2026-09-26 11:46:50,161 | INFO |   fold 1: AUC=0.9264 | 1.7 min | decorrido 72 min
+2026-09-26 11:46:50,200 | INFO |   [fold 2/3] treino=1,102,152 teste=551,080 | trials=6
+2026-09-26 11:46:50,273 | INFO | [tune] rf | n_trials=6 | timeout=3.0 min
+2026-09-26 11:46:50,330 | INFO | [group_sample] 34,442/137,769 partidas (25%) -> 275,536 linhas
+2026-09-26 11:46:50,363 | INFO | [dense] (275536, 192) -> denso float32 (0.2 GB)
+2026-09-26 11:47:22,557 | INFO | [obj] trial 0: loss=0.35082 | 32.1s
+2026-09-26 11:47:30,123 | INFO | [obj] trial 1: loss=0.39723 | 7.5s
+2026-09-26 11:47:37,588 | INFO | [obj] trial 2: loss=0.39652 | 7.4s
+2026-09-26 11:47:47,574 | INFO | [obj] trial 4: loss=0.38969 | 7.6s
+2026-09-26 11:48:17,270 | INFO | [obj] trial 5: loss=0.35317 | 29.7s
+2026-09-26 11:48:17,299 | INFO |     tuning rf: 6 trials (1 podados), loss=0.35082 | 1.5 min | best={'max_depth': 24, 'min_samples_leaf': 2, 'max_features': 0.5}
+2026-09-26 11:48:17,411 | INFO | [dense] (1102152, 192) -> denso float32 (0.8 GB)
+[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 16 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  18 tasks      | elapsed:    2.4s
+[Parallel(n_jobs=-1)]: Done 168 tasks      | elapsed:   13.5s
+[Parallel(n_jobs=-1)]: Done 200 out of 200 | elapsed:   15.6s finished
+2026-09-26 11:48:35,866 | INFO |   fold 2: AUC=0.9262 | 1.8 min | decorrido 74 min
+2026-09-26 11:48:35,903 | INFO |   [fold 3/3] treino=1,102,160 teste=551,072 | trials=6
+2026-09-26 11:48:35,970 | INFO | [tune] rf | n_trials=6 | timeout=3.0 min
+2026-09-26 11:48:36,008 | INFO | [group_sample] 34,442/137,770 partidas (25%) -> 275,536 linhas
+2026-09-26 11:48:36,037 | INFO | [dense] (275536, 192) -> denso float32 (0.2 GB)
+2026-09-26 11:49:08,147 | INFO | [obj] trial 0: loss=0.35074 | 32.0s
+2026-09-26 11:49:15,853 | INFO | [obj] trial 1: loss=0.39707 | 7.7s
+2026-09-26 11:49:23,592 | INFO | [obj] trial 2: loss=0.39657 | 7.7s
+2026-09-26 11:49:33,663 | INFO | [obj] trial 4: loss=0.38984 | 7.7s
+2026-09-26 11:50:04,028 | INFO | [obj] trial 5: loss=0.35274 | 30.3s
+2026-09-26 11:50:04,064 | INFO |     tuning rf: 6 trials (1 podados), loss=0.35074 | 1.5 min | best={'max_depth': 24, 'min_samples_leaf': 2, 'max_features': 0.5}
+2026-09-26 11:50:04,168 | INFO | [dense] (1102160, 192) -> denso float32 (0.8 GB)
+[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 16 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  18 tasks      | elapsed:    2.5s
+[Parallel(n_jobs=-1)]: Done 168 tasks      | elapsed:   13.7s
+[Parallel(n_jobs=-1)]: Done 200 out of 200 | elapsed:   15.8s finished
+2026-09-26 11:50:22,938 | INFO |   fold 3: AUC=0.9261 | 1.8 min | decorrido 76 min
+2026-09-26 11:50:23,295 | INFO | [run_nested] rf: 5.3 min | AUC OOF=0.9262
+2026-09-26 11:50:23,295 | INFO | [dense] (1653232, 192) -> denso float32 (1.3 GB)
+[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 16 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  18 tasks      | elapsed:    2.7s
+[Parallel(n_jobs=-1)]: Done 168 tasks      | elapsed:   15.8s
+[Parallel(n_jobs=-1)]: Done 200 out of 200 | elapsed:   18.2s finished
+2026-09-26 11:50:42,693 | INFO | [main] salvo results_no_units\models\final_rf_B.joblib (20.7 MB)
+2026-09-26 11:50:42,723 | INFO | == lgbm | B | 192 feats | tuning 15.8 min | decorrido 76 min
+2026-09-26 11:50:43,125 | INFO |   [fold 1/3] treino=1,102,152 teste=551,080 | trials=6
+2026-09-26 11:50:43,195 | INFO | [tune] lgbm | n_trials=6 | timeout=6.3 min
+2026-09-26 11:50:43,233 | INFO | [group_sample] 34,442/137,769 partidas (25%) -> 275,536 linhas
+2026-09-26 11:51:24,579 | INFO | [obj] trial 0: loss=0.32262 | 41.3s | árvores=3292
+2026-09-26 11:51:35,264 | INFO | [obj] trial 1: loss=0.32377 | 10.6s | árvores=435
+2026-09-26 11:51:54,658 | INFO | [obj] trial 2: loss=0.32295 | 19.4s | árvores=1107
+2026-09-26 11:52:27,254 | INFO |     tuning lgbm: 6 trials (3 podados), loss=0.32262 | 1.7 min | best={'learning_rate': 0.03140570343331407, 'num_leaves': 20, 'min_child_samples': 97, 'subsample': 0.7574820079030267, 'colsample_bytree': 0.3804392518553657, 'reg_lambda': 5.817101458598127, 'n_estimators': 10000}
+2026-09-26 12:00:09,653 | INFO | [fit] lgbm early stopping: 9998 árvores | ganho logloss últimas 1000: 0.00013
+2026-09-26 12:01:02,064 | INFO |   [fold 1] modelo salvo fold_lgbm_B_0.joblib (9.0 MB)
+2026-09-26 12:01:02,164 | INFO |   fold 1: AUC=0.9395 | 10.3 min | decorrido 86 min
+2026-09-26 12:01:02,201 | INFO |   [fold 2/3] treino=1,102,152 teste=551,080 | trials=6
+2026-09-26 12:01:02,268 | INFO | [tune] lgbm | n_trials=6 | timeout=4.8 min
+2026-09-26 12:01:02,302 | INFO | [group_sample] 34,442/137,769 partidas (25%) -> 275,536 linhas
+2026-09-26 12:01:45,145 | INFO | [obj] trial 0: loss=0.31745 | 42.8s | árvores=3517
+2026-09-26 12:01:56,578 | INFO | [obj] trial 1: loss=0.31886 | 11.4s | árvores=491
+2026-09-26 12:02:19,636 | INFO | [obj] trial 2: loss=0.31764 | 23.0s | árvores=1395
+2026-09-26 12:02:55,813 | INFO |     tuning lgbm: 6 trials (3 podados), loss=0.31745 | 1.9 min | best={'learning_rate': 0.03140570343331407, 'num_leaves': 20, 'min_child_samples': 97, 'subsample': 0.7574820079030267, 'colsample_bytree': 0.3804392518553657, 'reg_lambda': 5.817101458598127, 'n_estimators': 10000}
+2026-09-26 12:10:17,112 | INFO | [fit] lgbm early stopping: 9172 árvores | ganho logloss últimas 1000: 0.00014
+2026-09-26 12:11:12,692 | INFO |   [fold 2] modelo salvo fold_lgbm_B_1.joblib (8.3 MB)
+2026-09-26 12:11:12,796 | INFO |   fold 2: AUC=0.9397 | 10.2 min | decorrido 97 min
+2026-09-26 12:11:12,837 | INFO |   [fold 3/3] treino=1,102,160 teste=551,072 | trials=6
+2026-09-26 12:11:12,905 | INFO | [tune] lgbm | n_trials=6 | timeout=4.8 min
+2026-09-26 12:11:12,940 | INFO | [group_sample] 34,442/137,770 partidas (25%) -> 275,536 linhas
+2026-09-26 12:11:55,755 | INFO | [obj] trial 0: loss=0.32362 | 42.8s | árvores=3352
+2026-09-26 12:12:05,398 | INFO | [obj] trial 1: loss=0.32571 | 9.6s | árvores=345
+2026-09-26 12:12:29,213 | INFO | [obj] trial 2: loss=0.32446 | 23.8s | árvores=1423
+2026-09-26 12:13:06,599 | INFO |     tuning lgbm: 6 trials (3 podados), loss=0.32362 | 1.9 min | best={'learning_rate': 0.03140570343331407, 'num_leaves': 20, 'min_child_samples': 97, 'subsample': 0.7574820079030267, 'colsample_bytree': 0.3804392518553657, 'reg_lambda': 5.817101458598127, 'n_estimators': 10000}
+2026-09-26 12:20:57,810 | INFO | [fit] lgbm early stopping: 9919 árvores | ganho logloss últimas 1000: 0.00008
+2026-09-26 12:21:52,280 | INFO |   [fold 3] modelo salvo fold_lgbm_B_2.joblib (9.0 MB)
+2026-09-26 12:21:52,385 | INFO |   fold 3: AUC=0.9396 | 10.7 min | decorrido 107 min
+2026-09-26 12:21:52,752 | INFO | [run_nested] lgbm: 31.2 min | AUC OOF=0.9396
+2026-09-26 12:33:28,529 | INFO | [fit] lgbm early stopping: 9979 árvores | ganho logloss últimas 1000: 0.00019
+2026-09-26 12:33:29,150 | INFO | [main] salvo results_no_units\models\final_lgbm_B.joblib (9.0 MB)
+2026-09-26 12:34:04,725 | INFO | [bootstrap] 100/500 | 36s
+2026-09-26 12:34:40,036 | INFO | [bootstrap] 200/500 | 71s
+2026-09-26 12:35:14,651 | INFO | [bootstrap] 300/500 | 105s
+2026-09-26 12:35:48,963 | INFO | [bootstrap] 400/500 | 140s
+2026-09-26 12:36:24,516 | INFO | [bootstrap] 500/500 | 175s
+2026-09-26 12:36:25,220 | INFO | [metrics] n=1,653,232 | auc=0.7408 logloss=0.5789 brier=0.1983 f1=0.7262 match_top4_acc=0.6871
+2026-09-26 12:36:26,298 | INFO | [metrics] n=1,653,232 | auc=0.9142 logloss=0.3784 brier=0.1170 f1=0.8363 match_top4_acc=0.8596
+2026-09-26 12:36:27,360 | INFO | [metrics] n=1,653,232 | auc=0.9235 logloss=0.3541 brier=0.1109 f1=0.8451 match_top4_acc=0.8701
+2026-09-26 12:36:28,449 | INFO | [metrics] n=1,653,232 | auc=0.9385 logloss=0.3160 brier=0.0989 f1=0.8612 match_top4_acc=0.8906
+2026-09-26 12:36:29,518 | INFO | [metrics] n=1,653,232 | auc=0.9250 logloss=0.3489 brier=0.1092 f1=0.8467 match_top4_acc=0.8733
+2026-09-26 12:36:30,583 | INFO | [metrics] n=1,653,232 | auc=0.9262 logloss=0.3481 brier=0.1087 f1=0.8484 match_top4_acc=0.8736
+2026-09-26 12:36:31,656 | INFO | [metrics] n=1,653,232 | auc=0.9396 logloss=0.3131 brier=0.0979 f1=0.8627 match_top4_acc=0.8925
+2026-09-26 12:36:31,663 | INFO | 
+         model    auc  logloss  brier     f1  match_top4_acc  auc_lo  auc_hi  logloss_lo  logloss_hi  brier_lo  brier_hi
+        lgbm_B 0.9396   0.3131 0.0979 0.8627          0.8925  0.9393  0.9399      0.3125      0.3139    0.0977    0.0982
+        lgbm_A 0.9385   0.3160 0.0989 0.8612          0.8906  0.9382  0.9387      0.3154      0.3167    0.0987    0.0992
+          rf_B 0.9262   0.3481 0.1087 0.8484          0.8736  0.9259  0.9265      0.3475      0.3488    0.1085    0.1089
+      logreg_B 0.9250   0.3489 0.1092 0.8467          0.8733  0.9247  0.9253      0.3482      0.3497    0.1090    0.1095
+          rf_A 0.9235   0.3541 0.1109 0.8451          0.8701  0.9232  0.9238      0.3535      0.3548    0.1106    0.1111
+      logreg_A 0.9142   0.3784 0.1170 0.8363          0.8596  0.9138  0.9146      0.3775      0.3794    0.1168    0.1173
+baseline_level 0.7408   0.5789 0.1983 0.7262          0.6871  0.7401  0.7415      0.5782      0.5795    0.1980    0.1986
+2026-09-26 12:36:34,420 | INFO | [delong] baseline_level vs logreg_A: z=-450.86 | p=0.00e+00
+2026-09-26 12:36:34,437 | INFO | [delong] baseline_level vs rf_A: z=-496.66 | p=0.00e+00
+2026-09-26 12:36:34,453 | INFO | [delong] baseline_level vs lgbm_A: z=-546.46 | p=0.00e+00
+2026-09-26 12:36:34,470 | INFO | [delong] baseline_level vs logreg_B: z=-518.38 | p=0.00e+00
+2026-09-26 12:36:34,486 | INFO | [delong] baseline_level vs rf_B: z=-520.73 | p=0.00e+00
+2026-09-26 12:36:34,503 | INFO | [delong] baseline_level vs lgbm_B: z=-555.00 | p=0.00e+00
+2026-09-26 12:36:34,519 | INFO | [delong] logreg_A vs rf_A: z=-72.70 | p=0.00e+00
+2026-09-26 12:36:34,537 | INFO | [delong] logreg_A vs lgbm_A: z=-193.07 | p=0.00e+00
+2026-09-26 12:36:34,555 | INFO | [delong] logreg_A vs logreg_B: z=-116.04 | p=0.00e+00
+2026-09-26 12:36:34,573 | INFO | [delong] logreg_A vs rf_B: z=-91.03 | p=0.00e+00
+2026-09-26 12:36:34,590 | INFO | [delong] logreg_A vs lgbm_B: z=-197.74 | p=0.00e+00
+2026-09-26 12:36:34,606 | INFO | [delong] rf_A vs lgbm_A: z=-171.26 | p=0.00e+00
+2026-09-26 12:36:34,623 | INFO | [delong] rf_A vs logreg_B: z=-13.03 | p=7.92e-39
+2026-09-26 12:36:34,639 | INFO | [delong] rf_A vs rf_B: z=-62.61 | p=0.00e+00
+2026-09-26 12:36:34,656 | INFO | [delong] rf_A vs lgbm_B: z=-178.00 | p=0.00e+00
+2026-09-26 12:36:34,672 | INFO | [delong] lgbm_A vs logreg_B: z=136.38 | p=0.00e+00
+2026-09-26 12:36:34,689 | INFO | [delong] lgbm_A vs rf_B: z=145.10 | p=0.00e+00
+2026-09-26 12:36:34,705 | INFO | [delong] lgbm_A vs lgbm_B: z=-42.78 | p=0.00e+00
+2026-09-26 12:36:34,722 | INFO | [delong] logreg_B vs rf_B: z=-12.00 | p=3.58e-33
+2026-09-26 12:36:34,739 | INFO | [delong] logreg_B vs lgbm_B: z=-156.93 | p=0.00e+00
+2026-09-26 12:36:34,755 | INFO | [delong] rf_B vs lgbm_B: z=-163.15 | p=0.00e+00
+2026-09-26 12:36:34,761 | INFO | [main] Holm aplicado: 42 comparações (42 significativas a 5%)
+2026-09-26 12:36:34,969 | INFO | [main] temporal: teste=patch 16.5 (201,624) | treino=1,451,608
+2026-09-26 12:36:57,760 | INFO | [fit] logreg: 186/186 coef. não nulos | n_iter=11
+2026-09-26 12:36:57,958 | INFO | [metrics] n=201,624 | auc=0.9134 logloss=0.3782 brier=0.1189 f1=0.8371 match_top4_acc=0.8569
+2026-09-26 12:36:57,991 | INFO | [dense] (1451608, 186) -> denso float32 (1.1 GB)
+[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 16 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  18 tasks      | elapsed:    3.1s
+[Parallel(n_jobs=-1)]: Done 168 tasks      | elapsed:   16.1s
+[Parallel(n_jobs=-1)]: Done 200 out of 200 | elapsed:   18.4s finished
+2026-09-26 12:37:18,064 | INFO | [metrics] n=201,624 | auc=0.9227 logloss=0.3598 brier=0.1121 f1=0.8478 match_top4_acc=0.8710
+2026-09-26 12:47:21,757 | INFO | [fit] lgbm early stopping: 9993 árvores | ganho logloss últimas 1000: 0.00018
+2026-09-26 12:47:41,315 | INFO | [metrics] n=201,624 | auc=0.9379 logloss=0.3193 brier=0.0998 f1=0.8625 match_top4_acc=0.8910
+2026-09-26 12:47:58,851 | INFO | [fit] logreg: 187/187 coef. não nulos | n_iter=9
+2026-09-26 12:47:59,045 | INFO | [metrics] n=201,624 | auc=0.9239 logloss=0.3554 brier=0.1119 f1=0.8475 match_top4_acc=0.8725
+2026-09-26 12:47:59,085 | INFO | [dense] (1451608, 187) -> denso float32 (1.1 GB)
+[Parallel(n_jobs=-1)]: Using backend ThreadingBackend with 16 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  18 tasks      | elapsed:    2.5s
+[Parallel(n_jobs=-1)]: Done 168 tasks      | elapsed:   13.9s
+[Parallel(n_jobs=-1)]: Done 200 out of 200 | elapsed:   16.0s finished
+2026-09-26 12:48:16,549 | INFO | [metrics] n=201,624 | auc=0.9256 logloss=0.3537 brier=0.1098 f1=0.8512 match_top4_acc=0.8748
+2026-09-26 12:58:40,740 | INFO | [fit] lgbm early stopping: 9993 árvores | ganho logloss últimas 1000: 0.00014
+2026-09-26 12:59:00,070 | INFO | [metrics] n=201,624 | auc=0.9387 logloss=0.3173 brier=0.0991 f1=0.8641 match_top4_acc=0.8922
+2026-09-26 12:59:00,807 | INFO | [main] saídas em D:\Estudos\TCC\tft_tcc_uspesalq_v2\results_no_units | Total: 144 min

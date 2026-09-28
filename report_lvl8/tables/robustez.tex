@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\caption{Análises de robustez.}
+\label{tab:robustez}
+\centering
+\small
+\begin{tabular}{lcc}
+\toprule
+Análise & Spearman & Jaccard@20 \\
+\midrule
+Estabilidade entre folds — modelos OOF (A) & 0.899 ± 0.004 & 0.937 \\
+Estabilidade entre folds — modelos OOF (B) & 0.895 ± 0.006 & 1.000 \\
+SHAP vs coef. Logística (A) & 0.562 & 0.333 \\
+SHAP vs coef. Logística (B) & 0.564 & 0.290 \\
+Temporal: teste no patch 16.5 (A) & AUC=0.936 & LogLoss=0.329 \\
+Temporal: teste no patch 16.5 (B) & AUC=0.937 & LogLoss=0.325 \\
+\bottomrule
+\end{tabular}
+\end{table}

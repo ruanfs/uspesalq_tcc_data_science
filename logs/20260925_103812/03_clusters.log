@@ -1,0 +1,16 @@
+2026-09-25 10:44:23,819 | INFO | Carregando base de dados parquet...
+2026-09-25 10:44:24,803 | INFO | MiniBatchKMeans K=12 (sem uso do rótulo; euclidiana² = Hamming em binário)
+2026-09-25 10:44:34,219 | INFO |   archetype_Ionia_TheBoss_Wukong_0: n=184,751 | top4=0.545 [0.543; 0.547]
+2026-09-25 10:44:35,164 | INFO |   archetype_Piltover_Defender_Vi_1: n=357,370 | top4=0.443 [0.441; 0.444]
+2026-09-25 10:44:35,638 | INFO |   archetype_Demacia_Defender_Garen_2: n=171,561 | top4=0.523 [0.521; 0.525]
+2026-09-25 10:44:35,950 | INFO |   archetype_Piltover_Freljord_Braum_3: n=107,248 | top4=0.545 [0.542; 0.547]
+2026-09-25 10:44:36,313 | INFO |   archetype_Void_KaisaUnique_Kaisa_4: n=117,204 | top4=0.537 [0.534; 0.540]
+2026-09-25 10:44:36,750 | INFO |   archetype_Noxus_Juggernaut_Swain_5: n=163,318 | top4=0.501 [0.499; 0.503]
+2026-09-25 10:44:37,074 | INFO |   archetype_Brawler_Invoker_Kobuko_6: n=108,089 | top4=0.452 [0.449; 0.455]
+2026-09-25 10:44:37,318 | INFO |   archetype_Piltover_Warden_Loris_7: n=104,977 | top4=0.497 [0.495; 0.501]
+2026-09-25 10:44:37,601 | INFO |   archetype_Yordle_Defender_Kennen_8: n=87,368 | top4=0.482 [0.478; 0.485]
+2026-09-25 10:44:37,962 | INFO |   archetype_Gunslinger_Brawler_MissFortune_9: n=120,952 | top4=0.511 [0.508; 0.513]
+2026-09-25 10:44:38,256 | INFO |   archetype_Slayer_Vanquisher_BelVeth_10: n=93,383 | top4=0.540 [0.537; 0.543]
+2026-09-25 10:44:38,384 | INFO |   archetype_Yordle_Targon_Ziggs_11: n=37,011 | top4=0.528 [0.523; 0.533]
+2026-09-25 10:44:38,389 | INFO | Relatório de arquétipos salvo em report\archetypes_report.csv
+2026-09-25 10:44:58,416 | INFO | Processo concluído! 12 arquétipos adicionados aos dados.

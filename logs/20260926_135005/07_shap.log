@@ -1,0 +1,52 @@
+2026-09-26 13:50:08,027 | [load] lendo data\processed\features.parquet
+2026-09-26 13:50:08,036 | [load] 812 features | 811 no cenário A
+2026-09-26 13:50:08,416 | [load] meta: 1,653,232 linhas | 206,654 partidas | top4=0.500 | patches=['16.1', '16.2', '16.3', '16.4', '16.5']
+2026-09-26 13:50:10,420 | [load] bloco 1/9: nnz=45,259,348 | 369 MB | 2.0s
+2026-09-26 13:50:11,971 | [load] bloco 2/9: nnz=19,861,226 | 166 MB | 1.6s
+2026-09-26 13:50:13,045 | [load] bloco 3/9: nnz=6,148,658 | 56 MB | 1.1s
+2026-09-26 13:50:13,960 | [load] bloco 4/9: nnz=2,820,451 | 29 MB | 0.9s
+2026-09-26 13:50:14,879 | [load] bloco 5/9: nnz=3,724,670 | 36 MB | 0.9s
+2026-09-26 13:50:15,763 | [load] bloco 6/9: nnz=2,058,209 | 23 MB | 0.9s
+2026-09-26 13:50:16,641 | [load] bloco 7/9: nnz=2,348,539 | 25 MB | 0.9s
+2026-09-26 13:50:17,548 | [load] bloco 8/9: nnz=1,780,805 | 21 MB | 0.9s
+2026-09-26 13:50:17,734 | [load] bloco 9/9: nnz=1,468,481 | 18 MB | 0.2s
+2026-09-26 13:50:18,914 | [load] XA: (1653232, 816), densidade=0.0646, 704 MB | XB: (1653232, 817) | tempo 10.9s
+2026-09-26 13:53:33,731 | [lgbm_A] SHAP em 5000 linhas × 816 features | 195s
+2026-09-26 13:53:36,294 |   [2] agrupado ok | 197s
+2026-09-26 13:53:51,681 |   [2b] permutação ok | 213s
+2026-09-26 13:53:51,988 |   H1b SHAP médio por nº de traits ouro+: {0.0: 0.018, 1.0: -0.023, 2.0: 0.062, 3.0: 0.242}
+2026-09-26 13:53:51,990 |   [3] hipóteses ok | 213s
+2026-09-26 13:54:40,647 |   [4] dependência ok | 262s
+[Parallel(n_jobs=8)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done   5 out of  16 | elapsed:  5.3min remaining: 11.7min
+[Parallel(n_jobs=8)]: Done   9 out of  16 | elapsed: 10.3min remaining:  8.0min
+[Parallel(n_jobs=8)]: Done  13 out of  16 | elapsed: 10.3min remaining:  2.4min
+[Parallel(n_jobs=8)]: Done  16 out of  16 | elapsed: 10.5min finished
+2026-09-26 14:05:10,445 |   [5] interações ok (200 linhas) | 891s
+2026-09-26 14:05:35,818 |   estabilidade: fold 1/5 | origem=03 | treino=completo (03) | árvores=9914 | fit 0s | total 21s
+2026-09-26 14:06:45,646 |   estabilidade: fold 2/5 | origem=03 | treino=completo (03) | árvores=3695 | fit 0s | total 70s
+2026-09-26 14:08:09,462 |   estabilidade: fold 3/5 | origem=03 | treino=completo (03) | árvores=4221 | fit 0s | total 84s
+2026-09-26 14:08:20,337 |   estabilidade: fold 4/5 | origem=03 | treino=completo (03) | árvores=8175 | fit 0s | total 11s
+2026-09-26 14:08:51,678 |   estabilidade: fold 5/5 | origem=03 | treino=completo (03) | árvores=7679 | fit 0s | total 31s
+2026-09-26 14:08:51,762 |   estabilidade: Spearman=0.933 | Jaccard@20=0.933
+2026-09-26 14:08:51,763 | [lgbm_A] concluído em 18.5 min
+2026-09-26 14:11:49,212 | [lgbm_B] SHAP em 5000 linhas × 817 features | 177s
+2026-09-26 14:11:51,679 |   [2] agrupado ok | 180s
+2026-09-26 14:12:05,281 |   [2b] permutação ok | 194s
+2026-09-26 14:12:05,606 |   H1b SHAP médio por nº de traits ouro+: {0.0: 0.027, 1.0: -0.029, 2.0: 0.03, 3.0: 0.253}
+2026-09-26 14:12:05,607 |   [3] hipóteses ok | 194s
+2026-09-26 14:12:54,797 |   [4] dependência ok | 243s
+[Parallel(n_jobs=8)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done   5 out of  16 | elapsed:  4.9min remaining: 10.9min
+[Parallel(n_jobs=8)]: Done   9 out of  16 | elapsed:  9.3min remaining:  7.2min
+[Parallel(n_jobs=8)]: Done  13 out of  16 | elapsed:  9.5min remaining:  2.2min
+[Parallel(n_jobs=8)]: Done  16 out of  16 | elapsed:  9.7min finished
+2026-09-26 14:22:35,682 |   [5] interações ok (200 linhas) | 824s
+2026-09-26 14:23:59,094 |   estabilidade: fold 1/5 | origem=03 | treino=completo (03) | árvores=4234 | fit 0s | total 79s
+2026-09-26 14:24:10,403 |   estabilidade: fold 2/5 | origem=03 | treino=completo (03) | árvores=8480 | fit 0s | total 11s
+2026-09-26 14:25:28,097 |   estabilidade: fold 3/5 | origem=03 | treino=completo (03) | árvores=4164 | fit 0s | total 78s
+2026-09-26 14:26:37,870 |   estabilidade: fold 4/5 | origem=03 | treino=completo (03) | árvores=3619 | fit 0s | total 70s
+2026-09-26 14:27:44,407 |   estabilidade: fold 5/5 | origem=03 | treino=completo (03) | árvores=3543 | fit 0s | total 66s
+2026-09-26 14:27:44,494 |   estabilidade: Spearman=0.942 | Jaccard@20=0.891
+2026-09-26 14:27:44,494 | [lgbm_B] concluído em 18.9 min
+2026-09-26 14:27:44,545 | Concluído -> results\shap

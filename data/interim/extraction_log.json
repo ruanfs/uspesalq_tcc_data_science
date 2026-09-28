@@ -1,0 +1,28 @@
+{
+  "raw_matches": 270713,
+  "kept_matches": 206654,
+  "drop_patch": 27902,
+  "drop_queue": 30455,
+  "drop_set": 5561,
+  "drop_incomplete": 102,
+  "puuid_dup_in_match": 472,
+  "drop_duplicate": 39,
+  "n_participants": 1653232,
+  "top4_rate": 0.5,
+  "patches": {
+    "16.2": 41595,
+    "16.3": 57111,
+    "16.4": 50740,
+    "16.5": 25203,
+    "16.1": 32005
+  },
+  "date_range": [
+    "2026-01-07 23:04:15.543000",
+    "2026-03-14 06:37:49.985000"
+  ],
+  "n_unique_units": 103,
+  "n_unique_traits": 52,
+  "n_unique_items": 153,
+  "unknown_rarities": [],
+  "elo": "Master+ (Master, Grandmaster, Challenger) via League-V1"
+}

@@ -1,0 +1,25 @@
+{
+  "n_rows": 1653232,
+  "n_matches": 206654,
+  "n_features": 799,
+  "by_block": {
+    "unit_item": 524,
+    "item": 104,
+    "unit": 101,
+    "trait": 48,
+    "aggregate": 22,
+    "level_model_B": 1
+  },
+  "min_freq": 0.005,
+  "n_dropped_rare": 9530,
+  "n_dropped_constant": 0,
+  "unit_item_pairs_kept": 524,
+  "sparsity_sparse_blocks": 0.9556388024479617,
+  "patches": {
+    "16.3": 57111,
+    "16.4": 50740,
+    "16.2": 41595,
+    "16.1": 32005,
+    "16.5": 25203
+  }
+}

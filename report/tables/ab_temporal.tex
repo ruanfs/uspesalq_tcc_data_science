@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\caption{Validação temporal: A vs B.}
+\label{tab:abtemp}
+\centering
+\small
+\begin{tabular}{lcccccc}
+\toprule
+Rodada & Modelo & Patch teste & AUC A & AUC B & ΔAUC (B−A) & ΔLog loss (B−A) \\
+\midrule
+Principal & Reg. Logística L1 & 16.500000 & 0.913 & 0.924 & +0.0116 & -0.0312 \\
+Principal & Random Forest & 16.500000 & 0.923 & 0.925 & +0.0028 & -0.0058 \\
+Principal & LightGBM & 16.500000 & 0.939 & 0.940 & +0.0014 & -0.0044 \\
+Level ≥ 8 & Reg. Logística L1 & 16.500000 & 0.910 & 0.922 & +0.0123 & -0.0285 \\
+Level ≥ 8 & Random Forest & 16.500000 & 0.918 & 0.922 & +0.0042 & -0.0083 \\
+Level ≥ 8 & LightGBM & 16.500000 & 0.936 & 0.937 & +0.0015 & -0.0046 \\
+Sem unidades & Reg. Logística L1 & 16.500000 & 0.913 & 0.924 & +0.0105 & -0.0228 \\
+Sem unidades & Random Forest & 16.500000 & 0.923 & 0.926 & +0.0028 & -0.0061 \\
+Sem unidades & LightGBM & 16.500000 & 0.938 & 0.939 & +0.0009 & -0.0021 \\
+\bottomrule
+\end{tabular}
+\end{table}

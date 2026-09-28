@@ -1,0 +1,27 @@
+\begin{table}[htbp]
+\caption{Diferenças pareadas de AUC (bootstrap por partida e teste de DeLong).}
+\label{tab:comparacoes}
+\centering
+\small
+\begin{tabular}{lccc}
+\toprule
+Comparação & Dif. AUC [IC 95\%] & p (bootstrap, Holm) & p (DeLong, Holm) \\
+\midrule
+Baseline (nível) vs Reg. Logística L1 (A) & -0.1734 [-0.1742; -0.1727] & <0,001 & <0,001 \\
+Baseline (nível) vs Random Forest (A) & -0.1827 [-0.1834; -0.1820] & <0,001 & <0,001 \\
+Baseline (nível) vs LightGBM (A) & -0.1977 [-0.1984; -0.1970] & <0,001 & <0,001 \\
+Baseline (nível) vs Reg. Logística L1 (B) & -0.1842 [-0.1849; -0.1835] & <0,001 & <0,001 \\
+Baseline (nível) vs Random Forest (B) & -0.1854 [-0.1861; -0.1847] & <0,001 & <0,001 \\
+Baseline (nível) vs LightGBM (B) & -0.1988 [-0.1995; -0.1982] & <0,001 & <0,001 \\
+Reg. Logística L1 (A) vs LightGBM (A) & -0.0243 [-0.0245; -0.0240] & <0,001 & <0,001 \\
+Reg. Logística L1 (A) vs LightGBM (B) & -0.0254 [-0.0257; -0.0252] & <0,001 & <0,001 \\
+Random Forest (A) vs LightGBM (A) & -0.0150 [-0.0151; -0.0148] & <0,001 & <0,001 \\
+Random Forest (A) vs LightGBM (B) & -0.0161 [-0.0163; -0.0159] & <0,001 & <0,001 \\
+LightGBM (A) vs Reg. Logística L1 (B) & 0.0135 [0.0133; 0.0137] & <0,001 & <0,001 \\
+LightGBM (A) vs Random Forest (B) & 0.0122 [0.0121; 0.0124] & <0,001 & <0,001 \\
+LightGBM (A) vs LightGBM (B) & -0.0011 [-0.0012; -0.0011] & <0,001 & <0,001 \\
+Reg. Logística L1 (B) vs LightGBM (B) & -0.0146 [-0.0148; -0.0144] & <0,001 & <0,001 \\
+Random Forest (B) vs LightGBM (B) & -0.0134 [-0.0135; -0.0132] & <0,001 & <0,001 \\
+\bottomrule
+\end{tabular}
+\end{table}

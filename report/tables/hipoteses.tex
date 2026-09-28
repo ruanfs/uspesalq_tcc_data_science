@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\caption{Teste das hipóteses via SHAP (log-odds). Sustentada quando o limite inferior do IC é maior que zero.}
+\label{tab:hipoteses}
+\centering
+\small
+\begin{tabular}{lccccc}
+\toprule
+Hipótese & Cenário & |SHAP| quali & |SHAP| quanti & Diferença [IC 95\%] & Sustentada \\
+\midrule
+H1 (compl.): traits > unidades & A & 0.250 & 0.498 & -0.248 [-0.263; -0.233] & Não \\
+H1: traits ouro/prismáticas > nº de traits ativas & A & 0.037 & 0.194 & -0.157 [-0.163; -0.151] & Não \\
+H2: 4-5 custos 2★ > custo total & A & 0.380 & 0.118 & 0.262 [0.254; 0.269] & Sim \\
+H3: itens nos carregadores > total de itens completos & A & 0.304 & 0.412 & -0.107 [-0.114; -0.100] & Não \\
+H1 (compl.): traits > unidades & B & 0.237 & 0.447 & -0.209 [-0.222; -0.196] & Não \\
+H1: traits ouro/prismáticas > nº de traits ativas & B & 0.037 & 0.173 & -0.136 [-0.141; -0.132] & Não \\
+H2: 4-5 custos 2★ > custo total & B & 0.269 & 0.051 & 0.218 [0.213; 0.224] & Sim \\
+H3: itens nos carregadores > total de itens completos & B & 0.340 & 0.401 & -0.060 [-0.067; -0.053] & Não \\
+\bottomrule
+\end{tabular}
+\end{table}

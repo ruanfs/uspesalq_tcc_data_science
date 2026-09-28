@@ -1,0 +1,26 @@
+[
+  {
+    "step": 1,
+    "name": "extract",
+    "cmd": "01_extract.py",
+    "returncode": 0,
+    "seconds": 305.0,
+    "log": "logs\\20260925_103812\\01_extract.log"
+  },
+  {
+    "step": 2,
+    "name": "features",
+    "cmd": "02_features.py --inp data/interim --out data/processed --min-freq 0.005",
+    "returncode": 0,
+    "seconds": 65.2,
+    "log": "logs\\20260925_103812\\02_features.log"
+  },
+  {
+    "step": 3,
+    "name": "clusters",
+    "cmd": "02b_features.py",
+    "returncode": 0,
+    "seconds": 36.3,
+    "log": "logs\\20260925_103812\\03_clusters.log"
+  }
+]

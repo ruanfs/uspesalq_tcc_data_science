@@ -1,0 +1,19 @@
+\begin{table}
+\caption{Análises de sensibilidade.}
+\label{tab:sens}
+\begin{tabular}{lllll}
+\toprule
+Rodada & Modelo & AUC [IC 95\%] & Log loss & Brier \\
+\midrule
+Principal & baseline\_level & 0.741 [0.740; 0.742] & 0.579 & 0.198 \\
+Principal & lgbm\_A & 0.941 [0.941; 0.941] & 0.310 & 0.097 \\
+Principal & lgbm\_B & 0.942 [0.942; 0.942] & 0.308 & 0.096 \\
+Level ≥ 8 & baseline\_level & 0.718 [0.717; 0.719] & 0.597 & 0.206 \\
+Level ≥ 8 & lgbm\_A & 0.937 [0.937; 0.937] & 0.319 & 0.100 \\
+Level ≥ 8 & lgbm\_B & 0.938 [0.938; 0.938] & 0.317 & 0.099 \\
+Sem unidades & baseline\_level & 0.741 [0.740; 0.741] & 0.579 & 0.198 \\
+Sem unidades & lgbm\_A & 0.938 [0.938; 0.939] & 0.316 & 0.099 \\
+Sem unidades & lgbm\_B & 0.940 [0.939; 0.940] & 0.313 & 0.098 \\
+\bottomrule
+\end{tabular}
+\end{table}
