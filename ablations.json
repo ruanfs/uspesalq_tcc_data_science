@@ -1,0 +1,20 @@
+{
+  "specs": {
+    "agg_trait": {"base": "agg+sparse_lgbm", "drop_blocks": ["unit", "item", "unit_item"]},
+    "agg_unit":  {"base": "agg+sparse_lgbm", "drop_blocks": ["trait", "item", "unit_item"]},
+    "agg_item":  {"base": "agg+sparse_lgbm", "drop_blocks": ["trait", "unit"]},
+    "H1_noQ":  {"base": "lgbm_A", "drop_blocks": ["trait"]},
+    "H1_noR":  {"base": "lgbm_A", "drop_blocks": ["unit"]},
+    "H1b_noQ": {"base": "lgbm_A", "drop": ["n_traits_gold_plus", "n_traits_prismatic", "gold_plus_share"]},
+    "H1b_noR": {"base": "lgbm_A", "drop": ["n_active_traits"]},
+    "H2_noQ":  {"base": "lgbm_A", "drop": ["n_hi_cost_2star", "share_hi_cost_2star"]},
+    "H2_noR":  {"base": "lgbm_A", "drop": ["sum_cost"]},
+    "H3_noQ":  {"base": "lgbm_A", "drop": ["n_carries", "n_full_items_on_hi_cost", "carries_per_unit"]},
+    "H3_noR":  {"base": "lgbm_A", "drop": ["n_full_items", "full_items_per_unit"]}
+  },
+  "contrasts": [
+    ["abl_agg_trait", "agg_lgbm"], ["abl_agg_unit", "agg_lgbm"], ["abl_agg_item", "agg_lgbm"],
+    ["abl_H1_noR", "abl_H1_noQ"], ["abl_H1b_noR", "abl_H1b_noQ"],
+    ["abl_H2_noR", "abl_H2_noQ"], ["abl_H3_noR", "abl_H3_noQ"]
+  ]
+}
