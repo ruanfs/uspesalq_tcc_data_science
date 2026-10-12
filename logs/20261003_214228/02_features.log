@@ -1,0 +1,45 @@
+2026-10-03 21:48:31,929 | INFO | features | 1,653,232 linhas | treino=1,451,608 (['16.1', '16.2', '16.3', '16.4']) | teste=201,624 | partidas por patch: {'16.3': 57111, '16.4': 50740, '16.2': 41595, '16.1': 32005, '16.5': 25203}
+2026-10-03 21:49:20,707 | INFO | features | Itens descartados (vazamento EmptyBag): 69,940 | fora do volume (ThiefsGloves): 798,709
+2026-10-03 21:49:23,175 | INFO | features | bloco trait    :     52 ->    48 colunas
+2026-10-03 21:49:23,322 | INFO | features | bloco unit     :    103 ->   101 colunas
+2026-10-03 21:49:23,497 | INFO | features | bloco item     :    152 ->   102 colunas
+2026-10-03 21:49:23,709 | INFO | features | bloco unit_item: 10,000 ->   507 colunas
+2026-10-03 21:49:25,129 | INFO | features | agregados de volume: 21 | intensidade (Cenário C): 10
+2026-10-03 21:49:47,421 | INFO | features | {
+  "n_rows": 1653232,
+  "n_train": 1451608,
+  "n_test": 201624,
+  "n_matches": 206654,
+  "train_patches": [
+    "16.1",
+    "16.2",
+    "16.3",
+    "16.4"
+  ],
+  "n_features": 789,
+  "by_block": {
+    "unit_item": 507,
+    "item": 102,
+    "unit": 101,
+    "trait": 48,
+    "aggregate": 22,
+    "aggregate_norm": 9,
+    "level_model_B": 1
+  },
+  "n_volume_aggregates": 21,
+  "min_freq": 0.005,
+  "n_dropped_rare": 9549,
+  "n_dropped_constant": 0,
+  "unit_item_pairs_kept": 507,
+  "sparsity_sparse_blocks": 0.9546944224362581,
+  "items_dropped_empty_bag": 69940,
+  "items_excluded_from_volume_thiefs_gloves": 798709,
+  "gold_plus_definition": "style in {4,5}; unique (style=3) exclu\u00edda",
+  "patches": {
+    "16.3": 57111,
+    "16.4": 50740,
+    "16.2": 41595,
+    "16.1": 32005,
+    "16.5": 25203
+  }
+}

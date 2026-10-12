@@ -1,0 +1,21 @@
+2026-10-04 07:47:06,674 | INFO | train | [main] 03_train v9.2 | args={'inp': 'data/processed', 'out': 'results_mid', 'models': 'lgbm', 'only': 'lgbm_A', 'ablations': '', 'trials': 6, 'trials_slow': 6, 'tune_timeout_min': 25.0, 'outer': 3, 'inner': 3, 'tune_frac': 0.1, 'n_boot': 300, 'logreg_max_iter': 5000, 'rf_trees': 300, 'rf_max_samples': 0.3, 'min_level': 0, 'drop_agg': '', 'drop_blocks': '', 'skip_puuid': True, 'abl_retune': False, 'lgbm_lr_min': 0.06, 'es_rounds': 100, 'placements': '3,6', 'lambdamart': False} | CFG={'LGBM_MAX_TREES': 10000, 'LGBM_ES_FRAC': 0.1, 'LGBM_ES_ROUNDS': 100, 'LGBM_LR_RANGE': (0.06, 0.2), 'LOGREG_MAX_ITER': 5000, 'LOGREG_TOL': 0.0001, 'RF_N_TREES': 300, 'RF_MAX_SAMPLES': 0.3, 'RF_DENSE_MAX_GB': 12}
+2026-10-04 07:47:06,685 | INFO | train | [specs] agg=22 | A=801 | C=780 | volume em C: []
+2026-10-04 07:47:17,126 | INFO | train | [load] (1653232, 802) | nnz=98,619,428 | patches={'train': ['16.2', '16.3', '16.4', '16.1']
+Categories (5, str): ['16.2', '16.3', '16.4', '16.5', '16.1'], 'test': ['16.5']
+Categories (5, str): ['16.2', '16.3', '16.4', '16.5', '16.1']}
+2026-10-04 07:47:17,815 | INFO | train | [main] colocações 3–6: 826,616 linhas
+2026-10-04 07:47:18,855 | INFO | train | [main] treino=725,804 | teste(16.5)=100,812 | 1 specs
+2026-10-04 07:47:18,857 | INFO | train | == lgbm_A | lgbm | 801 feats | decorrido 0 min
+2026-10-04 07:47:28,265 | INFO | train |     [tune] lgbm: 6 trials | loss=0.53149 | {'learning_rate': 0.07567129095541027, 'num_leaves': 50, 'min_child_samples': 268, 'subsample': 0.6158933981424466, 'colsample_bytree': 0.8217897006651944, 'reg_lambda': 3.625493764283305}
+2026-10-04 07:47:41,645 | INFO | train |   [lgbm_A] fold 1/3: AUC=0.8244 | árvores=582 | 0.4 min | total 1 min
+2026-10-04 07:47:49,186 | INFO | train |     [tune] lgbm: 6 trials | loss=0.52605 | {'learning_rate': 0.10092671078330126, 'num_leaves': 33, 'min_child_samples': 142, 'subsample': 0.6557975442608167, 'colsample_bytree': 0.43371571882817456, 'reg_lambda': 0.029204338471814112}
+2026-10-04 07:48:17,789 | INFO | train |   [lgbm_A] fold 2/3: AUC=0.8255 | árvores=593 | 0.6 min | total 1 min
+2026-10-04 07:48:24,450 | INFO | train |     [tune] lgbm: 6 trials | loss=0.53062 | {'learning_rate': 0.10092671078330126, 'num_leaves': 33, 'min_child_samples': 142, 'subsample': 0.6557975442608167, 'colsample_bytree': 0.43371571882817456, 'reg_lambda': 0.029204338471814112}
+2026-10-04 07:48:58,037 | INFO | train |   [lgbm_A] fold 3/3: AUC=0.8251 | árvores=725 | 0.7 min | total 2 min
+2026-10-04 07:49:08,417 | INFO | train |     [tune] lgbm: 6 trials | loss=0.53096 | {'learning_rate': 0.10092671078330126, 'num_leaves': 33, 'min_child_samples': 142, 'subsample': 0.6557975442608167, 'colsample_bytree': 0.43371571882817456, 'reg_lambda': 0.029204338471814112}
+2026-10-04 07:49:57,620 | INFO | train | [lgbm_A] OOF AUC=0.8250 | 16.5 AUC=0.8231 | 801 feats
+2026-10-04 07:49:58,440 | INFO | train | 
+16.5 (out-of-time):
+ model test_patch    auc  logloss  brier     f1  match_top4_acc  spearman_match  ndcg4_match  auc_lo  auc_hi  logloss_lo  logloss_hi  brier_lo  brier_hi
+lgbm_A       16.5 0.8231   0.5198 0.1724 0.7581             NaN             NaN          NaN  0.8211  0.8254       0.517      0.5225    0.1713    0.1734
+2026-10-04 07:49:58,717 | INFO | train | [main] saídas em D:\Estudos\TCC\tft_tcc_uspesalq_v2\results_mid | total 3 min

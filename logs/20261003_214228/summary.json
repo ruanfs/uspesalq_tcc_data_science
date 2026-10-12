@@ -1,0 +1,74 @@
+[
+  {
+    "step": 1,
+    "name": "extract",
+    "returncode": 0,
+    "timeout": false,
+    "seconds": 360.6,
+    "log": "logs\\20261003_214228\\01_extract.log"
+  },
+  {
+    "step": 2,
+    "name": "features",
+    "returncode": 0,
+    "timeout": false,
+    "seconds": 77.8,
+    "log": "logs\\20261003_214228\\02_features.log"
+  },
+  {
+    "step": 3,
+    "name": "clusters",
+    "returncode": 0,
+    "timeout": false,
+    "seconds": 58.4,
+    "log": "logs\\20261003_214228\\03_clusters.log"
+  },
+  {
+    "step": 4,
+    "name": "train_main",
+    "returncode": 0,
+    "timeout": false,
+    "seconds": 18448.1,
+    "log": "logs\\20261003_214228\\04_train_main.log"
+  },
+  {
+    "step": 5,
+    "name": "shap",
+    "returncode": 0,
+    "timeout": false,
+    "seconds": 10398.3,
+    "log": "logs\\20261003_214228\\05_shap.log"
+  },
+  {
+    "step": 6,
+    "name": "train_logreg",
+    "returncode": 0,
+    "timeout": false,
+    "seconds": 3231.7,
+    "log": "logs\\20261003_214228\\06_train_logreg.log"
+  },
+  {
+    "step": 7,
+    "name": "train_lvl8",
+    "returncode": 0,
+    "timeout": false,
+    "seconds": 3701.1,
+    "log": "logs\\20261003_214228\\07_train_lvl8.log"
+  },
+  {
+    "step": 8,
+    "name": "train_mid",
+    "returncode": 0,
+    "timeout": false,
+    "seconds": 173.8,
+    "log": "logs\\20261003_214228\\08_train_mid.log"
+  },
+  {
+    "step": 9,
+    "name": "report",
+    "returncode": 1,
+    "timeout": false,
+    "seconds": 2.0,
+    "log": "logs\\20261003_214228\\09_report.log"
+  }
+]

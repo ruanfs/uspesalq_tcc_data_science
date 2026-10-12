@@ -1,0 +1,3 @@
+spec,fold,auc,logloss,n_tr,n_te,inner_loss,params,inherited,n_iter,hit_cap
+agg_lgbm,0,0.9240773021450712,0.34999390534101327,725800,725808,0.35573011939993104,"{""learning_rate"": 0.033494758473134406, ""num_leaves"": 174, ""min_child_samples"": 137, ""subsample"": 0.8832290311184181, ""colsample_bytree"": 0.21646759543664196, ""reg_lambda"": 7.579479953348009}",False,1428,False
+agg_lgbm,1,0.9242130086689531,0.3498831139414541,725808,725800,0.3553098646468357,"{""learning_rate"": 0.033494758473134406, ""num_leaves"": 174, ""min_child_samples"": 137, ""subsample"": 0.8832290311184181, ""colsample_bytree"": 0.21646759543664196, ""reg_lambda"": 7.579479953348009}",False,1275,False

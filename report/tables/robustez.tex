@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\caption{Robustez e sensibilidade.}
+\label{tab:robustez}
+\centering
+\small
+\begin{tabular}{lc}
+\toprule
+Análise & Resultado \\
+\midrule
+Estabilidade SHAP entre folds (LGBM: Cenário A) & Spearman 0.941; Jaccard@20 0.840 \\
+Estabilidade SHAP entre folds (LGBM: Cenário C (sem volume)) & Spearman 0.954; Jaccard@20 0.830 \\
+Level ≥ 8: LGBM: Cenário A & AUC 0.9349 [0.9340; 0.9358] \\
+Level ≥ 8: LGBM: agregados & AUC 0.9212 [0.9203; 0.9222] \\
+Level ≥ 8: Baseline: nível & AUC 0.6875 [0.6852; 0.6893] \\
+Logística: Logística L1: Cenário A & AUC 0.9164 [0.9153; 0.9174] \\
+Colocações 3–6: LGBM: Cenário A & AUC 0.8231 [0.8211; 0.8254] \\
+LambdaMART (Cenário A) − LGBM: Cenário A, 16.5 & AUC 0.9300 (Δ -0.0070, DeLong p = <0,001); Spearman 0.8762 vs 0.8812; NDCG@4 0.9180 vs 0.9058 \\
+\bottomrule
+\end{tabular}
+\end{table}

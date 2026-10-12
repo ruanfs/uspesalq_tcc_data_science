@@ -1,0 +1,17 @@
+2026-10-03 21:49:51,272 | INFO | clusters | treino=1,451,608 | teste=201,624 | 149 colunas
+2026-10-03 21:50:03,098 | INFO | clusters |   archetype_Yordle_Defender_Kennen_0: n_tr=75,272 | top4=0.482 [0.478; 0.485] | lvl=8.75 | bv/u=9.83
+2026-10-03 21:50:03,545 | INFO | clusters |   archetype_Bilgewater_Gunslinger_MissFortune_1: n_tr=88,089 | top4=0.500 [0.497; 0.503] | lvl=8.81 | bv/u=9.53
+2026-10-03 21:50:04,213 | INFO | clusters |   archetype_Ionia_TheBoss_Wukong_2: n_tr=167,643 | top4=0.549 [0.547; 0.551] | lvl=8.78 | bv/u=8.90
+2026-10-03 21:50:04,804 | INFO | clusters |   archetype_Juggernaut_Brawler_Singed_3: n_tr=162,285 | top4=0.421 [0.419; 0.424] | lvl=8.21 | bv/u=9.26
+2026-10-03 21:50:05,259 | INFO | clusters |   archetype_Void_KaisaUnique_Kaisa_4: n_tr=107,673 | top4=0.539 [0.535; 0.541] | lvl=8.91 | bv/u=8.26
+2026-10-03 21:50:05,757 | INFO | clusters |   archetype_Vanquisher_Juggernaut_Ambessa_5: n_tr=130,837 | top4=0.542 [0.540; 0.545] | lvl=8.68 | bv/u=9.27
+2026-10-03 21:50:06,013 | INFO | clusters |   archetype_Demacia_Defender_JarvanIV_6: n_tr=58,136 | top4=0.423 [0.419; 0.427] | lvl=8.12 | bv/u=7.59
+2026-10-03 21:50:06,812 | INFO | clusters |   archetype_Warden_Piltover_Loris_7: n_tr=278,154 | top4=0.513 [0.511; 0.514] | lvl=8.64 | bv/u=8.67
+2026-10-03 21:50:07,345 | INFO | clusters |   archetype_Defender_Piltover_Vi_8: n_tr=141,467 | top4=0.484 [0.482; 0.487] | lvl=8.61 | bv/u=8.90
+2026-10-03 21:50:07,651 | INFO | clusters |   archetype_Brawler_Yordle_Wukong_9: n_tr=79,367 | top4=0.517 [0.514; 0.521] | lvl=9.11 | bv/u=8.29
+2026-10-03 21:50:08,048 | INFO | clusters |   archetype_Demacia_Defender_Garen_10: n_tr=93,128 | top4=0.588 [0.585; 0.591] | lvl=8.60 | bv/u=7.99
+2026-10-03 21:50:08,348 | INFO | clusters |   archetype_Defender_Explorer_Neeko_11: n_tr=69,557 | top4=0.353 [0.349; 0.356] | lvl=7.81 | bv/u=10.55
+2026-10-03 21:50:12,310 | INFO | clusters |   estabilidade K=8: ARI=0.489 ± 0.087
+2026-10-03 21:50:17,592 | INFO | clusters |   estabilidade K=12: ARI=0.620 ± 0.105
+2026-10-03 21:50:23,929 | INFO | clusters |   estabilidade K=16: ARI=0.737 ± 0.024
+2026-10-03 21:50:45,605 | INFO | clusters | Concluído: 12 arquétipos adicionados (ajuste somente no treino).

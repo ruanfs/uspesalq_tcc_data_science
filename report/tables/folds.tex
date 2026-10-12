@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\caption{Validação cruzada agrupada por partida.}
+\label{tab:folds}
+\centering
+\small
+\begin{tabular}{lccc}
+\toprule
+Modelo & Folds & AUC OOF (média ± dp) & Árvores (média) \\
+\midrule
+Agregados + itens & 5 & 0.9347 ± 0.0003 & 1417 \\
+Agregados + traits & 5 & 0.9337 ± 0.0001 & 1273 \\
+Agregados + unidades & 5 & 0.9363 ± 0.0002 & 1082 \\
+Baseline: nível & 5 & 0.7454 ± 0.0009 & — \\
+Baseline: valor do tabuleiro & 5 & 0.8465 ± 0.0005 & — \\
+LGBM: Cenário A & 5 & 0.9391 ± 0.0003 & 1108 \\
+LGBM: Cenário C (sem volume) & 5 & 0.9373 ± 0.0001 & 1262 \\
+LGBM: agregados & 5 & 0.9251 ± 0.0001 & 1215 \\
+LGBM: agregados + esparsos & 5 & 0.9392 ± 0.0003 & 1059 \\
+Random Forest: Cenário A & 5 & 0.9295 ± 0.0003 & — \\
+\bottomrule
+\end{tabular}
+\end{table}

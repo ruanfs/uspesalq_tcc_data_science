@@ -1,0 +1,249 @@
+{
+  "script": "03_train v9.2",
+  "args": {
+    "inp": "data/processed",
+    "out": "results",
+    "models": "lgbm,rf",
+    "only": "base_level,base_board_value,agg_lgbm,agg+sparse_lgbm,lgbm_A,lgbm_C,rf_A,abl_agg_trait,abl_agg_unit,abl_agg_item,abl_H1_noQ,abl_H1_noR,abl_H1b_noQ,abl_H1b_noR,abl_H2_noQ,abl_H2_noR,abl_H3_noQ,abl_H3_noR",
+    "ablations": "ablations.json",
+    "trials": 6,
+    "trials_slow": 6,
+    "tune_timeout_min": 25.0,
+    "outer": 5,
+    "inner": 3,
+    "tune_frac": 0.1,
+    "n_boot": 500,
+    "logreg_max_iter": 5000,
+    "rf_trees": 300,
+    "rf_max_samples": 0.3,
+    "min_level": 0,
+    "drop_agg": "",
+    "drop_blocks": "",
+    "skip_puuid": false,
+    "abl_retune": false,
+    "lgbm_lr_min": 0.06,
+    "es_rounds": 100,
+    "placements": "",
+    "lambdamart": true
+  },
+  "cfg": {
+    "LGBM_MAX_TREES": 10000,
+    "LGBM_ES_FRAC": 0.1,
+    "LGBM_ES_ROUNDS": 100,
+    "LGBM_LR_RANGE": [
+      0.06,
+      0.2
+    ],
+    "LOGREG_MAX_ITER": 5000,
+    "LOGREG_TOL": 0.0001,
+    "RF_N_TREES": 300,
+    "RF_MAX_SAMPLES": 0.3,
+    "RF_DENSE_MAX_GB": 12
+  },
+  "specs": {
+    "base_level": {
+      "model": "logit",
+      "n_features": 1,
+      "inherits": null
+    },
+    "base_board_value": {
+      "model": "logit",
+      "n_features": 1,
+      "inherits": null
+    },
+    "agg_lgbm": {
+      "model": "lgbm",
+      "n_features": 22,
+      "inherits": null
+    },
+    "agg+sparse_lgbm": {
+      "model": "lgbm",
+      "n_features": 780,
+      "inherits": null
+    },
+    "lgbm_A": {
+      "model": "lgbm",
+      "n_features": 801,
+      "inherits": null
+    },
+    "lgbm_C": {
+      "model": "lgbm",
+      "n_features": 780,
+      "inherits": null
+    },
+    "rf_A": {
+      "model": "rf",
+      "n_features": 801,
+      "inherits": null
+    },
+    "abl_agg_trait": {
+      "model": "lgbm",
+      "n_features": 70,
+      "inherits": "agg+sparse_lgbm"
+    },
+    "abl_agg_unit": {
+      "model": "lgbm",
+      "n_features": 123,
+      "inherits": "agg+sparse_lgbm"
+    },
+    "abl_agg_item": {
+      "model": "lgbm",
+      "n_features": 631,
+      "inherits": "agg+sparse_lgbm"
+    },
+    "abl_H1_noQ": {
+      "model": "lgbm",
+      "n_features": 753,
+      "inherits": "lgbm_A"
+    },
+    "abl_H1_noR": {
+      "model": "lgbm",
+      "n_features": 700,
+      "inherits": "lgbm_A"
+    },
+    "abl_H1b_noQ": {
+      "model": "lgbm",
+      "n_features": 798,
+      "inherits": "lgbm_A"
+    },
+    "abl_H1b_noR": {
+      "model": "lgbm",
+      "n_features": 800,
+      "inherits": "lgbm_A"
+    },
+    "abl_H2_noQ": {
+      "model": "lgbm",
+      "n_features": 799,
+      "inherits": "lgbm_A"
+    },
+    "abl_H2_noR": {
+      "model": "lgbm",
+      "n_features": 800,
+      "inherits": "lgbm_A"
+    },
+    "abl_H3_noQ": {
+      "model": "lgbm",
+      "n_features": 798,
+      "inherits": "lgbm_A"
+    },
+    "abl_H3_noR": {
+      "model": "lgbm",
+      "n_features": 799,
+      "inherits": "lgbm_A"
+    }
+  },
+  "pairs": [
+    [
+      "agg_lgbm",
+      "base_board_value"
+    ],
+    [
+      "base_board_value",
+      "base_level"
+    ],
+    [
+      "agg+sparse_lgbm",
+      "agg_lgbm"
+    ],
+    [
+      "lgbm_A",
+      "agg_lgbm"
+    ],
+    [
+      "lgbm_A",
+      "lgbm_C"
+    ],
+    [
+      "lgbm_A",
+      "rf_A"
+    ],
+    [
+      "lgbm_A",
+      "agg+sparse_lgbm"
+    ],
+    [
+      "agg+sparse_lgbm",
+      "abl_agg_trait"
+    ],
+    [
+      "agg+sparse_lgbm",
+      "abl_agg_unit"
+    ],
+    [
+      "agg+sparse_lgbm",
+      "abl_agg_item"
+    ],
+    [
+      "lgbm_A",
+      "abl_H1_noQ"
+    ],
+    [
+      "lgbm_A",
+      "abl_H1_noR"
+    ],
+    [
+      "lgbm_A",
+      "abl_H1b_noQ"
+    ],
+    [
+      "lgbm_A",
+      "abl_H1b_noR"
+    ],
+    [
+      "lgbm_A",
+      "abl_H2_noQ"
+    ],
+    [
+      "lgbm_A",
+      "abl_H2_noR"
+    ],
+    [
+      "lgbm_A",
+      "abl_H3_noQ"
+    ],
+    [
+      "lgbm_A",
+      "abl_H3_noR"
+    ],
+    [
+      "abl_agg_trait",
+      "agg_lgbm"
+    ],
+    [
+      "abl_agg_unit",
+      "agg_lgbm"
+    ],
+    [
+      "abl_agg_item",
+      "agg_lgbm"
+    ],
+    [
+      "abl_H1_noR",
+      "abl_H1_noQ"
+    ],
+    [
+      "abl_H1b_noR",
+      "abl_H1b_noQ"
+    ],
+    [
+      "abl_H2_noR",
+      "abl_H2_noQ"
+    ],
+    [
+      "abl_H3_noR",
+      "abl_H3_noQ"
+    ]
+  ],
+  "n_train": 1451608,
+  "n_test": 201624,
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "lightgbm": "4.7.0",
+    "optuna": "5.0.0",
+    "lightgbm_eval_api": "eval_X/eval_y"
+  }
+}

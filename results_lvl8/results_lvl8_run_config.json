@@ -1,0 +1,166 @@
+{
+  "script": "03_train v9.2",
+  "args": {
+    "inp": "data/processed",
+    "out": "results_lvl8",
+    "models": "lgbm",
+    "only": "base_level,agg_lgbm,lgbm_A,abl_H1_noQ,abl_H1_noR,abl_H1b_noQ,abl_H1b_noR,abl_H2_noQ,abl_H2_noR,abl_H3_noQ,abl_H3_noR",
+    "ablations": "ablations.json",
+    "trials": 6,
+    "trials_slow": 6,
+    "tune_timeout_min": 25.0,
+    "outer": 3,
+    "inner": 3,
+    "tune_frac": 0.1,
+    "n_boot": 300,
+    "logreg_max_iter": 5000,
+    "rf_trees": 300,
+    "rf_max_samples": 0.3,
+    "min_level": 8,
+    "drop_agg": "",
+    "drop_blocks": "",
+    "skip_puuid": true,
+    "abl_retune": false,
+    "lgbm_lr_min": 0.06,
+    "es_rounds": 100,
+    "placements": "",
+    "lambdamart": false
+  },
+  "cfg": {
+    "LGBM_MAX_TREES": 10000,
+    "LGBM_ES_FRAC": 0.1,
+    "LGBM_ES_ROUNDS": 100,
+    "LGBM_LR_RANGE": [
+      0.06,
+      0.2
+    ],
+    "LOGREG_MAX_ITER": 5000,
+    "LOGREG_TOL": 0.0001,
+    "RF_N_TREES": 300,
+    "RF_MAX_SAMPLES": 0.3,
+    "RF_DENSE_MAX_GB": 12
+  },
+  "specs": {
+    "base_level": {
+      "model": "logit",
+      "n_features": 1,
+      "inherits": null
+    },
+    "agg_lgbm": {
+      "model": "lgbm",
+      "n_features": 22,
+      "inherits": null
+    },
+    "lgbm_A": {
+      "model": "lgbm",
+      "n_features": 801,
+      "inherits": null
+    },
+    "abl_H1_noQ": {
+      "model": "lgbm",
+      "n_features": 753,
+      "inherits": "lgbm_A"
+    },
+    "abl_H1_noR": {
+      "model": "lgbm",
+      "n_features": 700,
+      "inherits": "lgbm_A"
+    },
+    "abl_H1b_noQ": {
+      "model": "lgbm",
+      "n_features": 798,
+      "inherits": "lgbm_A"
+    },
+    "abl_H1b_noR": {
+      "model": "lgbm",
+      "n_features": 800,
+      "inherits": "lgbm_A"
+    },
+    "abl_H2_noQ": {
+      "model": "lgbm",
+      "n_features": 799,
+      "inherits": "lgbm_A"
+    },
+    "abl_H2_noR": {
+      "model": "lgbm",
+      "n_features": 800,
+      "inherits": "lgbm_A"
+    },
+    "abl_H3_noQ": {
+      "model": "lgbm",
+      "n_features": 798,
+      "inherits": "lgbm_A"
+    },
+    "abl_H3_noR": {
+      "model": "lgbm",
+      "n_features": 799,
+      "inherits": "lgbm_A"
+    }
+  },
+  "pairs": [
+    [
+      "lgbm_A",
+      "agg_lgbm"
+    ],
+    [
+      "lgbm_A",
+      "abl_H1_noQ"
+    ],
+    [
+      "lgbm_A",
+      "abl_H1_noR"
+    ],
+    [
+      "lgbm_A",
+      "abl_H1b_noQ"
+    ],
+    [
+      "lgbm_A",
+      "abl_H1b_noR"
+    ],
+    [
+      "lgbm_A",
+      "abl_H2_noQ"
+    ],
+    [
+      "lgbm_A",
+      "abl_H2_noR"
+    ],
+    [
+      "lgbm_A",
+      "abl_H3_noQ"
+    ],
+    [
+      "lgbm_A",
+      "abl_H3_noR"
+    ],
+    [
+      "abl_H1_noR",
+      "abl_H1_noQ"
+    ],
+    [
+      "abl_H1b_noR",
+      "abl_H1b_noQ"
+    ],
+    [
+      "abl_H2_noR",
+      "abl_H2_noQ"
+    ],
+    [
+      "abl_H3_noR",
+      "abl_H3_noQ"
+    ]
+  ],
+  "n_train": 1365036,
+  "n_test": 186414,
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "lightgbm": "4.7.0",
+    "optuna": "5.0.0",
+    "lightgbm_eval_api": "eval_X/eval_y"
+  }
+}

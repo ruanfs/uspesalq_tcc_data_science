@@ -1,0 +1,9 @@
+{
+  "player_disjoint_auc": 0.9345824099557396,
+  "player_disjoint_n_train": 242424,
+  "player_disjoint_n_test": 291268,
+  "match_holdout_auc": 0.9385609087935262,
+  "delta_auc_player_minus_match": -0.003978498837786559,
+  "test_unseen_players_auc": 0.93673643623514,
+  "test_unseen_players_n": 9365
+}

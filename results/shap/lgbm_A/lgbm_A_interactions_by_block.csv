@@ -1,0 +1,16 @@
+bb,sum,count,mean
+aggregate × aggregate,0.895704,66,0.013571273
+aggregate × aggregate_norm,0.8445922,72,0.011730447
+aggregate × item,0.3209314,36,0.008914761
+aggregate × unit,0.23499197,60,0.0039165327
+aggregate × trait,0.1831364,48,0.0038153417
+trait × unit,0.13679361,20,0.0068396805
+aggregate_norm × aggregate_norm,0.10454012,15,0.006969341
+aggregate_norm × item,0.0991839,18,0.0055102166
+aggregate_norm × unit,0.075062245,30,0.002502075
+aggregate_norm × trait,0.0734999,24,0.003062496
+unit × unit,0.027057432,10,0.002705743
+item × unit,0.022596048,15,0.0015064032
+item × trait,0.012800142,12,0.0010666786
+trait × trait,0.005332269,6,0.0008887115
+item × item,0.005000188,3,0.0016667293

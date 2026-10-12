@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "D:\Estudos\TCC\tft_tcc_uspesalq_v2\05_report.py", line 474, in <module>
+    main(a)
+    ~~~~^^^
+  File "D:\Estudos\TCC\tft_tcc_uspesalq_v2\05_report.py", line 423, in main
+    x = read(Path(a.logreg) / f)
+  File "D:\Estudos\TCC\tft_tcc_uspesalq_v2\05_report.py", line 57, in read
+    return pd.read_parquet(p) if p.suffix == ".parquet" else pd.read_csv(p)
+                                                             ~~~~~~~~~~~^^^
+  File "C:\Users\Ruan\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pandas\io\parsers\readers.py", line 873, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\Ruan\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pandas\io\parsers\readers.py", line 300, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\Ruan\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pandas\io\parsers\readers.py", line 1645, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Ruan\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pandas\io\parsers\readers.py", line 1922, in _make_engine
+    return mapping[engine](f, **self.options)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ruan\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 95, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "pandas/_libs/parsers.pyx", line 575, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file

@@ -1,0 +1,30 @@
+2026-10-04 02:58:32,977 | INFO | train | [load] (1653232, 802) | nnz=98,619,428 | patches={'train': ['16.2', '16.3', '16.4', '16.1']
+Categories (5, str): ['16.2', '16.3', '16.4', '16.5', '16.1'], 'test': ['16.5']
+Categories (5, str): ['16.2', '16.3', '16.4', '16.5', '16.1']}
+2026-10-04 03:00:32,902 | INFO | shap | [lgbm_A] SHAP 16.5: (50000, 801) | 118s
+2026-10-04 03:00:50,953 | INFO | shap |   [lgbm_A] fold 0: SHAP OOF ok
+2026-10-04 03:03:39,322 | INFO | shap |   [lgbm_A] fold 1: SHAP OOF ok
+2026-10-04 03:03:52,573 | INFO | shap |   [lgbm_A] fold 2: SHAP OOF ok
+2026-10-04 03:04:07,618 | INFO | shap |   [lgbm_A] fold 3: SHAP OOF ok
+2026-10-04 03:07:05,507 | INFO | shap |   [lgbm_A] fold 4: SHAP OOF ok
+2026-10-04 03:07:05,532 | INFO | shap |   [lgbm_A] estabilidade: Spearman=0.941 | Jaccard@20=0.840
+[Parallel(n_jobs=8)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done   2 tasks      | elapsed:   19.3s
+[Parallel(n_jobs=8)]: Done  56 tasks      | elapsed:  2.1min
+[Parallel(n_jobs=8)]: Done  80 out of  80 | elapsed:  2.9min finished
+2026-10-04 03:13:16,345 | INFO | shap |   interações: 2000 linhas | 2.9 min
+2026-10-04 03:13:20,679 | INFO | shap | [lgbm_A] concluído em 14.8 min
+2026-10-04 03:39:15,644 | INFO | shap | [lgbm_C] SHAP 16.5: (50000, 780) | 1555s
+2026-10-04 03:42:55,862 | INFO | shap |   [lgbm_C] fold 0: SHAP OOF ok
+2026-10-04 03:43:13,752 | INFO | shap |   [lgbm_C] fold 1: SHAP OOF ok
+2026-10-04 03:47:23,989 | INFO | shap |   [lgbm_C] fold 2: SHAP OOF ok
+2026-10-04 03:51:21,308 | INFO | shap |   [lgbm_C] fold 3: SHAP OOF ok
+2026-10-04 03:54:52,067 | INFO | shap |   [lgbm_C] fold 4: SHAP OOF ok
+2026-10-04 03:54:52,092 | INFO | shap |   [lgbm_C] estabilidade: Spearman=0.954 | Jaccard@20=0.830
+[Parallel(n_jobs=8)]: Using backend LokyBackend with 8 concurrent workers.
+[Parallel(n_jobs=8)]: Done   2 tasks      | elapsed: 11.5min
+[Parallel(n_jobs=8)]: Done  56 tasks      | elapsed: 80.5min
+[Parallel(n_jobs=8)]: Done  80 out of  80 | elapsed: 115.1min finished
+2026-10-04 05:51:26,915 | INFO | shap |   interações: 2000 linhas | 115.1 min
+2026-10-04 05:51:31,383 | INFO | shap | [lgbm_C] concluído em 158.2 min
+2026-10-04 05:51:31,495 | INFO | shap | Concluído -> results\shap

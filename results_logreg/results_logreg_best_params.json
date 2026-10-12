@@ -1,0 +1,13 @@
+{
+  "logreg_A": {
+    "params": {
+      "C": 0.6351221010640696
+    },
+    "inner_loss": 0.3589446442622452,
+    "n_features": 801,
+    "n_iter": 70,
+    "converged": true,
+    "nnz_coef": 784,
+    "n_coef": 801
+  }
+}

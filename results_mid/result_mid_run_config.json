@@ -1,0 +1,63 @@
+{
+  "script": "03_train v9.2",
+  "args": {
+    "inp": "data/processed",
+    "out": "results_mid",
+    "models": "lgbm",
+    "only": "lgbm_A",
+    "ablations": "",
+    "trials": 6,
+    "trials_slow": 6,
+    "tune_timeout_min": 25.0,
+    "outer": 3,
+    "inner": 3,
+    "tune_frac": 0.1,
+    "n_boot": 300,
+    "logreg_max_iter": 5000,
+    "rf_trees": 300,
+    "rf_max_samples": 0.3,
+    "min_level": 0,
+    "drop_agg": "",
+    "drop_blocks": "",
+    "skip_puuid": true,
+    "abl_retune": false,
+    "lgbm_lr_min": 0.06,
+    "es_rounds": 100,
+    "placements": "3,6",
+    "lambdamart": false
+  },
+  "cfg": {
+    "LGBM_MAX_TREES": 10000,
+    "LGBM_ES_FRAC": 0.1,
+    "LGBM_ES_ROUNDS": 100,
+    "LGBM_LR_RANGE": [
+      0.06,
+      0.2
+    ],
+    "LOGREG_MAX_ITER": 5000,
+    "LOGREG_TOL": 0.0001,
+    "RF_N_TREES": 300,
+    "RF_MAX_SAMPLES": 0.3,
+    "RF_DENSE_MAX_GB": 12
+  },
+  "specs": {
+    "lgbm_A": {
+      "model": "lgbm",
+      "n_features": 801,
+      "inherits": null
+    }
+  },
+  "pairs": [],
+  "n_train": 725804,
+  "n_test": 100812,
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "lightgbm": "4.7.0",
+    "optuna": "5.0.0",
+    "lightgbm_eval_api": "eval_X/eval_y"
+  }
+}

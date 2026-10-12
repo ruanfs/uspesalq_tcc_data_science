@@ -1,0 +1,4 @@
+spec,fold,auc,logloss,n_tr,n_te,inner_loss,params,inherited,n_iter,hit_cap
+lgbm_A,0,0.8244250863094797,0.5151442911823605,483868,241936,0.531492428057298,"{""learning_rate"": 0.07567129095541027, ""num_leaves"": 50, ""min_child_samples"": 268, ""subsample"": 0.6158933981424466, ""colsample_bytree"": 0.8217897006651944, ""reg_lambda"": 3.625493764283305}",False,582,False
+lgbm_A,1,0.8255059342009682,0.5140248955827375,483868,241936,0.5260454005417668,"{""learning_rate"": 0.10092671078330126, ""num_leaves"": 33, ""min_child_samples"": 142, ""subsample"": 0.6557975442608167, ""colsample_bytree"": 0.43371571882817456, ""reg_lambda"": 0.029204338471814112}",False,593,False
+lgbm_A,2,0.8251256145216225,0.5143538812062215,483872,241932,0.5306248895066239,"{""learning_rate"": 0.10092671078330126, ""num_leaves"": 33, ""min_child_samples"": 142, ""subsample"": 0.6557975442608167, ""colsample_bytree"": 0.43371571882817456, ""reg_lambda"": 0.029204338471814112}",False,725,False

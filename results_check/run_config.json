@@ -1,0 +1,71 @@
+{
+  "script": "03_train v9.1",
+  "args": {
+    "inp": "data/processed",
+    "out": "results_check",
+    "models": "lgbm",
+    "only": "agg_lgbm,abl_agg_trait",
+    "ablations": "ablations.json",
+    "trials": 2,
+    "trials_slow": 10,
+    "tune_timeout_min": 20,
+    "outer": 2,
+    "inner": 3,
+    "tune_frac": 0.25,
+    "n_boot": 2000,
+    "logreg_max_iter": 5000,
+    "rf_trees": 300,
+    "rf_max_samples": 0.2,
+    "min_level": 0,
+    "drop_agg": "",
+    "drop_blocks": "",
+    "skip_puuid": true,
+    "abl_retune": false,
+    "lgbm_lr_min": 0.03,
+    "es_rounds": 200
+  },
+  "cfg": {
+    "LGBM_MAX_TREES": 10000,
+    "LGBM_ES_FRAC": 0.1,
+    "LGBM_ES_ROUNDS": 200,
+    "LGBM_LR_RANGE": [
+      0.03,
+      0.2
+    ],
+    "LOGREG_MAX_ITER": 5000,
+    "LOGREG_TOL": 0.0001,
+    "RF_N_TREES": 300,
+    "RF_MAX_SAMPLES": 0.2,
+    "RF_DENSE_MAX_GB": 12
+  },
+  "specs": {
+    "agg_lgbm": {
+      "model": "lgbm",
+      "n_features": 22,
+      "inherits": null
+    },
+    "abl_agg_trait": {
+      "model": "lgbm",
+      "n_features": 70,
+      "inherits": "agg+sparse_lgbm"
+    }
+  },
+  "pairs": [
+    [
+      "abl_agg_trait",
+      "agg_lgbm"
+    ]
+  ],
+  "n_train": 1451608,
+  "n_test": 201624,
+  "versions": {
+    "python": "3.14.6",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scipy": "1.17.1",
+    "sklearn": "1.9.0",
+    "lightgbm": "4.7.0",
+    "optuna": "5.0.0",
+    "lightgbm_eval_api": "eval_X/eval_y"
+  }
+}

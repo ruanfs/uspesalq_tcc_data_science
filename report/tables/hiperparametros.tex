@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\caption{Hiperparâmetros finais (tuning só no treino 16.1–16.4). Ablações herdam os da base; baselines logísticos não têm tuning.}
+\label{tab:hparams}
+\centering
+\small
+\begin{tabular}{lcccc}
+\toprule
+Execução & Modelo & Hiperparâmetros & Árvores/iter. & Nº feats \\
+\midrule
+Principal & LGBM: agregados & learning\_rate=0.07567; num\_leaves=50; min\_child\_samples=268; subsample=0.6159; colsample\_bytree=0.8218; reg\_lambda=3.625 & 1869 & 22 \\
+Principal & LGBM: agregados + esparsos & learning\_rate=0.06435; num\_leaves=174; min\_child\_samples=137; subsample=0.8832; colsample\_bytree=0.2165; reg\_lambda=7.579 & 933 & 780 \\
+Principal & LGBM: Cenário A & learning\_rate=0.1009; num\_leaves=33; min\_child\_samples=142; subsample=0.6558; colsample\_bytree=0.4337; reg\_lambda=0.0292 & 1691 & 801 \\
+Principal & LGBM: Cenário C (sem volume) & learning\_rate=0.06435; num\_leaves=174; min\_child\_samples=137; subsample=0.8832; colsample\_bytree=0.2165; reg\_lambda=7.579 & 1583 & 780 \\
+Principal & Random Forest: Cenário A & max\_depth=24; min\_samples\_leaf=3; max\_features=0.3 & 300 & 801 \\
+Logística & Logística L1: Cenário A & C=0.6351 & 70 & 801 \\
+Level ≥ 8 & LGBM: agregados & learning\_rate=0.1009; num\_leaves=33; min\_child\_samples=142; subsample=0.6558; colsample\_bytree=0.4337; reg\_lambda=0.0292 & 2084 & 22 \\
+Level ≥ 8 & LGBM: Cenário A & learning\_rate=0.1009; num\_leaves=33; min\_child\_samples=142; subsample=0.6558; colsample\_bytree=0.4337; reg\_lambda=0.0292 & 1501 & 801 \\
+Colocações 3–6 & LGBM: Cenário A & learning\_rate=0.1009; num\_leaves=33; min\_child\_samples=142; subsample=0.6558; colsample\_bytree=0.4337; reg\_lambda=0.0292 & 737 & 801 \\
+\bottomrule
+\end{tabular}
+\end{table}

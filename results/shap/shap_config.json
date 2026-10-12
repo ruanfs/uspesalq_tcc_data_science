@@ -1,0 +1,21 @@
+{
+  "script": "04_shap v9",
+  "args": {
+    "inp": "data/processed",
+    "res": "results",
+    "specs": "lgbm_A,lgbm_C",
+    "threads": 8,
+    "n_shap": 50000,
+    "n_stab": 10000,
+    "n_inter": 2000,
+    "inter_chunk": 25,
+    "top_inter": 30,
+    "top_pairs_ci": 30,
+    "n_perm": 5,
+    "n_perm_rows": 20000,
+    "n_boot": 500,
+    "force": false
+  },
+  "min_level": 0,
+  "shap": "0.52.0"
+}

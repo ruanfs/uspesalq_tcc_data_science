@@ -1,0 +1,16 @@
+\begin{table}[htbp]
+\caption{Hipóteses via ablação (level ≥ 8): ΔAUC = AUC(sem R) − AUC(sem Q). Valor positivo indica que o conjunto Q carrega mais informação única. |SHAP| é apenas descritivo.}
+\label{tab:hipoteses_lvl8}
+\centering
+\small
+\begin{tabular}{lccc}
+\toprule
+Hipótese & ΔAUC CV [IC 95\%] & ΔAUC 16.5 [IC 95\%] & Conclusão \\
+\midrule
+H1 (compl.): traits vs unidades & -0.0021 [-0.0023; -0.0019] & +0.0003 [-0.0001; +0.0006] & Sem diferença \\
+H1: traits ouro/prismáticas vs nº de traits ativas & -0.0002 [-0.0003; -0.0002] & -0.0004 [-0.0006; -0.0002] & R > Q \\
+H2: 4-5 custos 2★ vs custo total & +0.0000 [-0.0004; +0.0004] & +0.0004 [+0.0002; +0.0006] & Q > R \\
+H3: itens nos carregadores vs total de itens & +0.0007 [+0.0003; +0.0011] & +0.0008 [+0.0006; +0.0010] & Q > R \\
+\bottomrule
+\end{tabular}
+\end{table}

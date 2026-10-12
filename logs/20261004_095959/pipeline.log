@@ -1,0 +1,10 @@
+Pipeline v4 | Python 3.14.6 | etapas [9] | teto 16 h
+requirements.txt: 12 pacotes
+==========================================================================================
+[9] report | 09:59:59 | limite 15:59:59
+$ python 05_report.py --res results --sens results_lvl8 --logreg results_logreg --mid results_mid --inp data/processed --interim data/interim --out report
+2026-10-04 10:00:15,324 | INFO | Relatório em D:\Estudos\TCC\tft_tcc_uspesalq_v2\report
+[9] report: OK | 0:00:15
+==========================================================================================
+  [OK ] 9. report        0:00:15
+Total: 0:00:15 de 16 h

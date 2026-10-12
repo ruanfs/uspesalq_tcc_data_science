@@ -1,0 +1,16 @@
+{
+  "lgbm_A": {
+    "params": {
+      "learning_rate": 0.10092671078330126,
+      "num_leaves": 33,
+      "min_child_samples": 142,
+      "subsample": 0.6557975442608167,
+      "colsample_bytree": 0.43371571882817456,
+      "reg_lambda": 0.029204338471814112
+    },
+    "inner_loss": 0.530962516362605,
+    "n_features": 801,
+    "n_iter": 737,
+    "hit_cap": false
+  }
+}

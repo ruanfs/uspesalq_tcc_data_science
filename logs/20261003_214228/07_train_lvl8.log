@@ -1,0 +1,109 @@
+2026-10-04 06:45:25,503 | INFO | train | [main] 03_train v9.2 | args={'inp': 'data/processed', 'out': 'results_lvl8', 'models': 'lgbm', 'only': 'base_level,agg_lgbm,lgbm_A,abl_H1_noQ,abl_H1_noR,abl_H1b_noQ,abl_H1b_noR,abl_H2_noQ,abl_H2_noR,abl_H3_noQ,abl_H3_noR', 'ablations': 'ablations.json', 'trials': 6, 'trials_slow': 6, 'tune_timeout_min': 25.0, 'outer': 3, 'inner': 3, 'tune_frac': 0.1, 'n_boot': 300, 'logreg_max_iter': 5000, 'rf_trees': 300, 'rf_max_samples': 0.3, 'min_level': 8, 'drop_agg': '', 'drop_blocks': '', 'skip_puuid': True, 'abl_retune': False, 'lgbm_lr_min': 0.06, 'es_rounds': 100, 'placements': '', 'lambdamart': False} | CFG={'LGBM_MAX_TREES': 10000, 'LGBM_ES_FRAC': 0.1, 'LGBM_ES_ROUNDS': 100, 'LGBM_LR_RANGE': (0.06, 0.2), 'LOGREG_MAX_ITER': 5000, 'LOGREG_TOL': 0.0001, 'RF_N_TREES': 300, 'RF_MAX_SAMPLES': 0.3, 'RF_DENSE_MAX_GB': 12}
+2026-10-04 06:45:25,525 | INFO | train | [specs] agg=22 | A=801 | C=780 | volume em C: []
+2026-10-04 06:45:35,970 | INFO | train | [load] (1653232, 802) | nnz=98,619,428 | patches={'train': ['16.2', '16.3', '16.4', '16.1']
+Categories (5, str): ['16.2', '16.3', '16.4', '16.5', '16.1'], 'test': ['16.5']
+Categories (5, str): ['16.2', '16.3', '16.4', '16.5', '16.1']}
+2026-10-04 06:45:36,570 | INFO | train | [main] level >= 8: 1,551,450 linhas
+2026-10-04 06:45:38,454 | INFO | train | [main] treino=1,365,036 | teste(16.5)=186,414 | 11 specs
+2026-10-04 06:45:38,455 | INFO | train | == base_level | logit | 1 feats | decorrido 0 min
+2026-10-04 06:45:39,104 | INFO | train |   [base_level] fold 1/3: AUC=0.7220 | árvores=— | 0.0 min | total 0 min
+2026-10-04 06:45:39,395 | INFO | train |   [base_level] fold 2/3: AUC=0.7224 | árvores=— | 0.0 min | total 0 min
+2026-10-04 06:45:39,782 | INFO | train |   [base_level] fold 3/3: AUC=0.7220 | árvores=— | 0.0 min | total 0 min
+2026-10-04 06:45:40,143 | INFO | train | [base_level] OOF AUC=0.7220 | 16.5 AUC=0.6875 | 1 feats
+2026-10-04 06:45:40,172 | INFO | train | == agg_lgbm | lgbm | 22 feats | decorrido 0 min
+2026-10-04 06:45:45,203 | INFO | train |     [tune] lgbm: 6 trials | loss=0.37019 | {'learning_rate': 0.10092671078330126, 'num_leaves': 33, 'min_child_samples': 142, 'subsample': 0.6557975442608167, 'colsample_bytree': 0.43371571882817456, 'reg_lambda': 0.029204338471814112}
+2026-10-04 06:46:08,288 | INFO | train |   [agg_lgbm] fold 1/3: AUC=0.9207 | árvores=1388 | 0.5 min | total 1 min
+2026-10-04 06:46:12,923 | INFO | train |     [tune] lgbm: 6 trials | loss=0.36983 | {'learning_rate': 0.10092671078330126, 'num_leaves': 33, 'min_child_samples': 142, 'subsample': 0.6557975442608167, 'colsample_bytree': 0.43371571882817456, 'reg_lambda': 0.029204338471814112}
+2026-10-04 06:46:34,445 | INFO | train |   [agg_lgbm] fold 2/3: AUC=0.9199 | árvores=1318 | 0.4 min | total 1 min
+2026-10-04 06:46:38,731 | INFO | train |     [tune] lgbm: 6 trials | loss=0.36553 | {'learning_rate': 0.10092671078330126, 'num_leaves': 33, 'min_child_samples': 142, 'subsample': 0.6557975442608167, 'colsample_bytree': 0.43371571882817456, 'reg_lambda': 0.029204338471814112}
+2026-10-04 06:46:58,897 | INFO | train |   [agg_lgbm] fold 3/3: AUC=0.9200 | árvores=1246 | 0.4 min | total 2 min
+2026-10-04 06:47:06,041 | INFO | train |     [tune] lgbm: 6 trials | loss=0.36716 | {'learning_rate': 0.10092671078330126, 'num_leaves': 33, 'min_child_samples': 142, 'subsample': 0.6557975442608167, 'colsample_bytree': 0.43371571882817456, 'reg_lambda': 0.029204338471814112}
+2026-10-04 06:47:47,288 | INFO | train | [agg_lgbm] OOF AUC=0.9202 | 16.5 AUC=0.9212 | 22 feats
+2026-10-04 06:47:47,329 | INFO | train | == lgbm_A | lgbm | 801 feats | decorrido 2 min
+2026-10-04 06:48:05,860 | INFO | train |     [tune] lgbm: 6 trials | loss=0.34239 | {'learning_rate': 0.06434605659887388, 'num_leaves': 174, 'min_child_samples': 137, 'subsample': 0.8832290311184181, 'colsample_bytree': 0.21646759543664196, 'reg_lambda': 7.579479953348009}
+2026-10-04 06:49:29,821 | INFO | train |   [lgbm_A] fold 1/3: AUC=0.9359 | árvores=925 | 1.7 min | total 4 min
+2026-10-04 06:49:44,652 | INFO | train |     [tune] lgbm: 6 trials | loss=0.34163 | {'learning_rate': 0.16346237849419273, 'num_leaves': 27, 'min_child_samples': 35, 'subsample': 0.6733618039413735, 'colsample_bytree': 0.4433937943676302, 'reg_lambda': 0.12561043700013558}
+2026-10-04 06:50:36,154 | INFO | train |   [lgbm_A] fold 2/3: AUC=0.9342 | árvores=600 | 1.1 min | total 5 min
+2026-10-04 06:50:51,754 | INFO | train |     [tune] lgbm: 6 trials | loss=0.33481 | {'learning_rate': 0.10092671078330126, 'num_leaves': 33, 'min_child_samples': 142, 'subsample': 0.6557975442608167, 'colsample_bytree': 0.43371571882817456, 'reg_lambda': 0.029204338471814112}
+2026-10-04 06:52:28,355 | INFO | train |   [lgbm_A] fold 3/3: AUC=0.9351 | árvores=1218 | 1.9 min | total 7 min
+2026-10-04 06:52:51,606 | INFO | train |     [tune] lgbm: 6 trials | loss=0.33353 | {'learning_rate': 0.10092671078330126, 'num_leaves': 33, 'min_child_samples': 142, 'subsample': 0.6557975442608167, 'colsample_bytree': 0.43371571882817456, 'reg_lambda': 0.029204338471814112}
+2026-10-04 06:55:38,674 | INFO | train | [lgbm_A] OOF AUC=0.9351 | 16.5 AUC=0.9349 | 801 feats
+2026-10-04 06:55:38,751 | INFO | train | == abl_H1_noQ | lgbm | 753 feats | decorrido 10 min
+2026-10-04 06:55:38,751 | INFO | train | [abl_H1_noQ] herdando hiperparâmetros de lgbm_A
+2026-10-04 06:56:44,331 | INFO | train |   [abl_H1_noQ] fold 1/3: AUC=0.9357 | árvores=753 | 1.1 min | total 11 min
+2026-10-04 06:57:33,049 | INFO | train |   [abl_H1_noQ] fold 2/3: AUC=0.9339 | árvores=650 | 0.8 min | total 12 min
+2026-10-04 06:59:03,919 | INFO | train |   [abl_H1_noQ] fold 3/3: AUC=0.9347 | árvores=1304 | 1.5 min | total 14 min
+2026-10-04 07:01:29,484 | INFO | train | [abl_H1_noQ] OOF AUC=0.9348 | 16.5 AUC=0.9346 | 753 feats
+2026-10-04 07:01:29,547 | INFO | train | == abl_H1_noR | lgbm | 700 feats | decorrido 16 min
+2026-10-04 07:01:29,547 | INFO | train | [abl_H1_noR] herdando hiperparâmetros de lgbm_A
+2026-10-04 07:02:45,253 | INFO | train |   [abl_H1_noR] fold 1/3: AUC=0.9336 | árvores=957 | 1.2 min | total 17 min
+2026-10-04 07:03:34,276 | INFO | train |   [abl_H1_noR] fold 2/3: AUC=0.9319 | árvores=715 | 0.8 min | total 18 min
+2026-10-04 07:04:56,037 | INFO | train |   [abl_H1_noR] fold 3/3: AUC=0.9326 | árvores=1247 | 1.4 min | total 20 min
+2026-10-04 07:07:23,420 | INFO | train | [abl_H1_noR] OOF AUC=0.9327 | 16.5 AUC=0.9349 | 700 feats
+2026-10-04 07:07:23,484 | INFO | train | == abl_H1b_noQ | lgbm | 798 feats | decorrido 22 min
+2026-10-04 07:07:23,484 | INFO | train | [abl_H1b_noQ] herdando hiperparâmetros de lgbm_A
+2026-10-04 07:08:50,690 | INFO | train |   [abl_H1b_noQ] fold 1/3: AUC=0.9359 | árvores=945 | 1.4 min | total 23 min
+2026-10-04 07:09:50,895 | INFO | train |   [abl_H1b_noQ] fold 2/3: AUC=0.9341 | árvores=729 | 1.0 min | total 24 min
+2026-10-04 07:11:17,305 | INFO | train |   [abl_H1b_noQ] fold 3/3: AUC=0.9350 | árvores=1065 | 1.4 min | total 26 min
+2026-10-04 07:14:16,997 | INFO | train | [abl_H1b_noQ] OOF AUC=0.9350 | 16.5 AUC=0.9352 | 798 feats
+2026-10-04 07:14:17,070 | INFO | train | == abl_H1b_noR | lgbm | 800 feats | decorrido 29 min
+2026-10-04 07:14:17,070 | INFO | train | [abl_H1b_noR] herdando hiperparâmetros de lgbm_A
+2026-10-04 07:15:27,978 | INFO | train |   [abl_H1b_noR] fold 1/3: AUC=0.9356 | árvores=733 | 1.1 min | total 30 min
+2026-10-04 07:16:24,201 | INFO | train |   [abl_H1b_noR] fold 2/3: AUC=0.9339 | árvores=675 | 0.9 min | total 31 min
+2026-10-04 07:17:59,591 | INFO | train |   [abl_H1b_noR] fold 3/3: AUC=0.9348 | árvores=1187 | 1.6 min | total 33 min
+2026-10-04 07:20:51,319 | INFO | train | [abl_H1b_noR] OOF AUC=0.9348 | 16.5 AUC=0.9348 | 800 feats
+2026-10-04 07:20:51,390 | INFO | train | == abl_H2_noQ | lgbm | 799 feats | decorrido 35 min
+2026-10-04 07:20:51,390 | INFO | train | [abl_H2_noQ] herdando hiperparâmetros de lgbm_A
+2026-10-04 07:22:09,592 | INFO | train |   [abl_H2_noQ] fold 1/3: AUC=0.9360 | árvores=827 | 1.3 min | total 37 min
+2026-10-04 07:23:04,926 | INFO | train |   [abl_H2_noQ] fold 2/3: AUC=0.9343 | árvores=660 | 0.9 min | total 38 min
+2026-10-04 07:24:21,922 | INFO | train |   [abl_H2_noQ] fold 3/3: AUC=0.9349 | árvores=930 | 1.3 min | total 39 min
+2026-10-04 07:26:54,815 | INFO | train | [abl_H2_noQ] OOF AUC=0.9351 | 16.5 AUC=0.9351 | 799 feats
+2026-10-04 07:26:54,886 | INFO | train | == abl_H2_noR | lgbm | 800 feats | decorrido 41 min
+2026-10-04 07:26:54,886 | INFO | train | [abl_H2_noR] herdando hiperparâmetros de lgbm_A
+2026-10-04 07:28:08,678 | INFO | train |   [abl_H2_noR] fold 1/3: AUC=0.9360 | árvores=768 | 1.2 min | total 43 min
+2026-10-04 07:29:15,251 | INFO | train |   [abl_H2_noR] fold 2/3: AUC=0.9343 | árvores=829 | 1.1 min | total 44 min
+2026-10-04 07:30:36,394 | INFO | train |   [abl_H2_noR] fold 3/3: AUC=0.9350 | árvores=982 | 1.4 min | total 45 min
+2026-10-04 07:33:45,290 | INFO | train | [abl_H2_noR] OOF AUC=0.9351 | 16.5 AUC=0.9356 | 800 feats
+2026-10-04 07:33:45,360 | INFO | train | == abl_H3_noQ | lgbm | 798 feats | decorrido 48 min
+2026-10-04 07:33:45,360 | INFO | train | [abl_H3_noQ] herdando hiperparâmetros de lgbm_A
+2026-10-04 07:35:07,633 | INFO | train |   [abl_H3_noQ] fold 1/3: AUC=0.9353 | árvores=882 | 1.3 min | total 50 min
+2026-10-04 07:36:13,782 | INFO | train |   [abl_H3_noQ] fold 2/3: AUC=0.9335 | árvores=809 | 1.1 min | total 51 min
+2026-10-04 07:37:28,752 | INFO | train |   [abl_H3_noQ] fold 3/3: AUC=0.9343 | árvores=905 | 1.2 min | total 52 min
+2026-10-04 07:40:11,494 | INFO | train | [abl_H3_noQ] OOF AUC=0.9343 | 16.5 AUC=0.9343 | 798 feats
+2026-10-04 07:40:11,564 | INFO | train | == abl_H3_noR | lgbm | 799 feats | decorrido 55 min
+2026-10-04 07:40:11,564 | INFO | train | [abl_H3_noR] herdando hiperparâmetros de lgbm_A
+2026-10-04 07:41:33,874 | INFO | train |   [abl_H3_noR] fold 1/3: AUC=0.9358 | árvores=876 | 1.3 min | total 56 min
+2026-10-04 07:42:37,957 | INFO | train |   [abl_H3_noR] fold 2/3: AUC=0.9342 | árvores=782 | 1.1 min | total 57 min
+2026-10-04 07:44:00,731 | INFO | train |   [abl_H3_noR] fold 3/3: AUC=0.9350 | árvores=1011 | 1.4 min | total 59 min
+2026-10-04 07:46:34,959 | INFO | train | [abl_H3_noR] OOF AUC=0.9350 | 16.5 AUC=0.9351 | 799 feats
+2026-10-04 07:47:03,403 | INFO | train | 
+16.5 (out-of-time):
+      model test_patch    auc  logloss  brier     f1  match_top4_acc  spearman_match  ndcg4_match  auc_lo  auc_hi  logloss_lo  logloss_hi  brier_lo  brier_hi
+ abl_H2_noR       16.5 0.9356   0.3280 0.1025 0.8692             NaN          0.8789       0.9039  0.9347  0.9365      0.3257      0.3303    0.1017    0.1032
+abl_H1b_noQ       16.5 0.9352   0.3295 0.1030 0.8686             NaN          0.8779       0.9026  0.9344  0.9362      0.3272      0.3319    0.1022    0.1038
+ abl_H2_noQ       16.5 0.9351   0.3294 0.1029 0.8697             NaN          0.8787       0.9031  0.9343  0.9360      0.3272      0.3317    0.1021    0.1036
+ abl_H3_noR       16.5 0.9351   0.3295 0.1029 0.8689             NaN          0.8781       0.9033  0.9343  0.9360      0.3272      0.3317    0.1021    0.1036
+ abl_H1_noR       16.5 0.9349   0.3277 0.1023 0.8686             NaN          0.8769       0.8994  0.9340  0.9358      0.3255      0.3300    0.1016    0.1031
+     lgbm_A       16.5 0.9349   0.3302 0.1031 0.8687             NaN          0.8777       0.9032  0.9340  0.9358      0.3278      0.3325    0.1024    0.1039
+abl_H1b_noR       16.5 0.9348   0.3301 0.1032 0.8685             NaN          0.8771       0.9030  0.9339  0.9357      0.3278      0.3324    0.1024    0.1039
+ abl_H1_noQ       16.5 0.9346   0.3307 0.1033 0.8685             NaN          0.8773       0.9027  0.9338  0.9355      0.3282      0.3328    0.1026    0.1040
+ abl_H3_noQ       16.5 0.9343   0.3312 0.1036 0.8679             NaN          0.8757       0.9001  0.9335  0.9353      0.3288      0.3333    0.1028    0.1043
+   agg_lgbm       16.5 0.9212   0.3564 0.1123 0.8531             NaN          0.8467       0.8809  0.9203  0.9222      0.3541      0.3583    0.1115    0.1130
+ base_level       16.5 0.6875   0.6221 0.2184 0.7163             NaN          0.5418       0.6459  0.6852  0.6893      0.6202      0.6240    0.2175    0.2192
+2026-10-04 07:47:03,872 | INFO | train | 
+Comparações (ΔAUC):
+         m1          m2  cv_diff   cv_lo   cv_hi  test_diff  test_lo  test_hi
+     lgbm_A    agg_lgbm   0.0149  0.0130  0.0168     0.0137   0.0131   0.0143
+     lgbm_A  abl_H1_noQ   0.0003 -0.0001  0.0007     0.0002   0.0000   0.0004
+     lgbm_A  abl_H1_noR   0.0024  0.0019  0.0029    -0.0000  -0.0003   0.0003
+     lgbm_A abl_H1b_noQ   0.0001  0.0000  0.0002    -0.0004  -0.0005  -0.0002
+     lgbm_A abl_H1b_noR   0.0003  0.0003  0.0004     0.0001  -0.0001   0.0003
+     lgbm_A  abl_H2_noQ   0.0000 -0.0007  0.0007    -0.0003  -0.0005  -0.0001
+     lgbm_A  abl_H2_noR  -0.0000 -0.0004  0.0004    -0.0007  -0.0009  -0.0005
+     lgbm_A  abl_H3_noQ   0.0008  0.0004  0.0012     0.0006   0.0004   0.0008
+     lgbm_A  abl_H3_noR   0.0001 -0.0001  0.0004    -0.0002  -0.0004  -0.0000
+ abl_H1_noR  abl_H1_noQ  -0.0021 -0.0023 -0.0019     0.0003  -0.0001   0.0006
+abl_H1b_noR abl_H1b_noQ  -0.0002 -0.0003 -0.0002    -0.0004  -0.0006  -0.0002
+ abl_H2_noR  abl_H2_noQ   0.0000 -0.0004  0.0004     0.0004   0.0002   0.0006
+ abl_H3_noR  abl_H3_noQ   0.0007  0.0003  0.0011     0.0008   0.0006   0.0010
+2026-10-04 07:47:04,927 | INFO | train | [main] saídas em D:\Estudos\TCC\tft_tcc_uspesalq_v2\results_lvl8 | total 62 min
